@@ -50,12 +50,12 @@ const InfoSection = ({
     <Container>
       <div
         className={cn(
-          "flex flex-col lg:flex-row justify-between items-center gap-x-5 gap-y-16",
+          "flex flex-col lg:flex-row xl:gap-x-10 gap-x-5 gap-y-16",
           className
         )}
       >
         {/* image and watermark */}
-        <div className="relative w-fit">
+        <div className="relative w-fit flex-1">
           <MovementElement duration={1.3}>
             <Image
               src={image}
@@ -81,7 +81,7 @@ const InfoSection = ({
         </div>
         {/* ______________________ */}
 
-        <div className={cn(contentClass)}>
+        <div className={cn("flex-1", contentClass)}>
           {subTitle && (
             <p
               className={cn("text-xl text-primary-violet mb-2", subTitleClass)}
@@ -93,7 +93,7 @@ const InfoSection = ({
           {title && (
             <h1
               className={cn(
-                " text-3xl font-semibold text-deep-blue",
+                " text-3xl font-semibold text-deep-blue text-main-text-color",
                 titleClass
               )}
             >
@@ -102,10 +102,7 @@ const InfoSection = ({
           )}
           {children && (
             <div
-              className={cn(
-                "mt-5 text-lg font-medium text-black/50 ",
-                descriptionClass
-              )}
+              className={cn("mt-5 text-lg  text-black/50 ", descriptionClass)}
             >
               {children}
             </div>

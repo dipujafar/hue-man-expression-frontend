@@ -1,29 +1,28 @@
 import sectionImage from "@/assets/our-purpose/purposeImage1.png";
 import InfoSection from "@/components/shared/InfoSection";
-import { Button } from "@/components/ui/button";
 
 const Mission = () => {
   return (
-    <div className="section">
+    <div className="section-margin">
       <InfoSection
         image={sectionImage}
         title="MISSION"
-        subTitle="About us"
-        contentClass="flex flex-col justify-center max-w-2xl"
-        descriptionClass="text-primary-black"
+        contentClass="flex flex-col  max-w-2xl"
+        descriptionClass="text-primary-black "
         waterMarkClass="-bottom-16 right-0"
+        imageClass="w-auto justify-self-end"
+        className="items-center"
       >
         <div>
           <p>
-            At Hue-Man Links Incorporated, our mission is to connect families
-            whose loved ones are neurodivergent with qualified, specialized
-            sitters. We understand the demands and challenges families face, and
-            we're dedicated to providing trusted, compassionate care that offers
-            peace of mind. Our goal is to ease the burden, giving families the
-            confidence to take time for themselves, knowing their loved one is
-            in capable and caring hands. We strive to be the link that supports
-            families in finding the right care, so they can focus on balance and
-            well-being. 
+            At Hue-man Expressions, our mission is to provide inclusive and
+            empowering visual resources that reflect the beauty of diversity. We
+            are dedicated to creating educational and therapeutic tools that
+            authentically represent Black and brown children, teens, and adults,
+            ensuring every learner sees themselves in the materials they engage
+            with. Through our commitment to representation, we aim to foster
+            more meaningful, engaging, and effective therapy experiences for
+            neurodivergent individuals.
           </p>
         </div>
       </InfoSection>
