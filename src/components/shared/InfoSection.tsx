@@ -50,7 +50,7 @@ const InfoSection = ({
     <Container>
       <div
         className={cn(
-          "flex flex-col lg:flex-row xl:gap-x-10 gap-x-5 gap-y-16",
+          "flex flex-col lg:flex-row xl:gap-x-10 gap-x-5 gap-y-16 ",
           className
         )}
       >
@@ -60,7 +60,7 @@ const InfoSection = ({
             <Image
               src={image}
               alt="banner-image"
-              className={cn("z-10 w-full", imageClass)}
+              className={cn(" w-full", imageClass)}
             ></Image>
           </MovementElement>
 
@@ -112,12 +112,7 @@ const InfoSection = ({
               href={btnLink ? btnLink : "#"}
               className=" md:mt-8 mt-2 w-fit mx-auto"
             >
-              <Button
-                className={cn(
-                  " bg-primary-orange font-semibold px-8 py-6",
-                  btnClass
-                )}
-              >
+              <Button className={cn("font-semibold px-8 py-6", btnClass)}>
                 {btn}
               </Button>
             </Link>

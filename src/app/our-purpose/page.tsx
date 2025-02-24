@@ -3,7 +3,7 @@ import OurPurposeContainer from "./_components/OurPurposeContainer";
 
 const OurPurPosePage = () => {
   return (
-    <div className="page-margin bg-main-bg-color">
+    <div className="bg-main-bg-color page-margin ">
       <OurPurposeContainer></OurPurposeContainer>
     </div>
   );

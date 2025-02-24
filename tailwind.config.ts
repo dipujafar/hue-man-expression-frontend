@@ -50,8 +50,9 @@ export default {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
-        "main-bg-color": "#eedec3",
-        "main-text-color": "#684B3C",
+        "main-bg-color": "#F0E8DE",
+        "main-text-color": "#C37E19",
+        "primary-white": "#FDFDFD",
       },
       borderRadius: {
         lg: "var(--radius)",

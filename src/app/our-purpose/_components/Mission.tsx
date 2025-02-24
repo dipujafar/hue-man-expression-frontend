@@ -3,7 +3,7 @@ import InfoSection from "@/components/shared/InfoSection";
 
 const Mission = () => {
   return (
-    <div className="section-margin">
+    <div className="section-margin ">
       <InfoSection
         image={sectionImage}
         title="MISSION"

@@ -3,7 +3,7 @@ import InfoSection from "@/components/shared/InfoSection";
 
 const Founder = () => {
   return (
-    <div className="section-margin">
+    <div className="">
       <InfoSection
         image={sectionImage}
         title="Founder Spotlight"

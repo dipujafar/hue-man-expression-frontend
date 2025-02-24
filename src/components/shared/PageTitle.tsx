@@ -1,10 +1,19 @@
 import React from "react";
+import { Mr_Dafoe } from "next/font/google";
+const mr_dafoe = Mr_Dafoe({
+  subsets: ["latin"],
+  variable: "--font-mr-dafoe",
+  weight: ["400"],
+  display: "swap",
+});
 
 const PageTitle = ({ title }: { title: string }) => {
   return (
-    <h1 className="text-main-text-color md:text-6xl text-3xl text-center">
-      {title}
-    </h1>
+    <div className={mr_dafoe.className}>
+      <h1 className="text-main-text-color md:text-7xl text-4xl text-center">
+        <i> {title}</i>
+      </h1>
+    </div>
   );
 };
 
