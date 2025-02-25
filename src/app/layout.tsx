@@ -25,7 +25,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.className} antialiased`}>
         <Navbar></Navbar>
-        {children}
+        <div className="min-h-[calc(100vh-105px)] page-margin bg-main-bg-color">
+          {children}
+        </div>
 
         <Footer></Footer>
       </body>
