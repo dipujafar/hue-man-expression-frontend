@@ -54,6 +54,17 @@ export default {
         "main-text-color": "#C37E19",
         "primary-white": "#FDFDFD",
       },
+      fontFamily: {
+        poppins: ["var(--font-poppins)", "sans-serif"],
+        baloo: ["var(--font-baloo)", "sans-serif"],
+        lora: ["var(--font-lora)", "sans-serif"],
+        lucida: [
+          '"Lucida Sans Unicode"',
+          "Lucida Grande",
+          "Arial",
+          "sans-serif",
+        ],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

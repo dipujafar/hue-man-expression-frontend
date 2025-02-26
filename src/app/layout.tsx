@@ -1,12 +1,26 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Poppins } from "next/font/google";
+import { Poppins, Baloo_Chettan_2, Lora } from "next/font/google";
+
 import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
 
 const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-poppins",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const balooChettan2 = Baloo_Chettan_2({
+  subsets: ["latin"],
+  variable: "--font-baloo",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+const lora = Lora({
+  subsets: ["latin"],
+  variable: "--font-lora",
   weight: ["400", "500", "600", "700"],
   display: "swap",
 });
@@ -23,7 +37,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} antialiased`}>
+      <body
+        className={`${poppins.className} ${balooChettan2.variable} ${lora.variable} antialiased`}
+      >
         <Navbar></Navbar>
         <div className="min-h-[calc(100vh-105px)] page-margin bg-main-bg-color">
           {children}
