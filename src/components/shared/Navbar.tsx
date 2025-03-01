@@ -33,7 +33,7 @@ const navLinks = [
 
 const Navbar = () => {
   return (
-    <div className=" bg-primary-white overflow-x-auto">
+    <div className=" bg-primary-white overflow-x-auto] mx-auto">
       <Container className="flex justify-between gap-x-4 items-center  px-4 md:px-6  xl:px-16 2xl:px-28">
         <Link href={"/"}>
           <Image

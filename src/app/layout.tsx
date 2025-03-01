@@ -55,7 +55,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} ${balooChettan2.variable} ${lora.variable} ${montserrat.variable} ${madimi.variable} antialiased`}
+        className={`${poppins.className} ${balooChettan2.variable} ${lora.variable} ${montserrat.variable} ${madimi.variable} antialiased max-w-[2520px] mx-auto`}
       >
         <Navbar></Navbar>
         <div className="min-h-[calc(100vh-105px)] page-margin bg-main-bg-color">
