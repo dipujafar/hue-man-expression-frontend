@@ -2,6 +2,8 @@ import PageTitle from "@/components/shared/PageTitle";
 import React from "react";
 import BannerSection from "./BannerSection";
 import RepresentationSection from "./RepresentationSection";
+import FooterSection from "@/components/shared/FooterSection";
+import Container from "@/components/shared/Container";
 
 const HomeContainer = () => {
   return (
@@ -11,6 +13,9 @@ const HomeContainer = () => {
         <div className="lg:space-y-24 space-y-12">
           <BannerSection></BannerSection>
           <RepresentationSection></RepresentationSection>
+          <Container>
+            <FooterSection></FooterSection>
+          </Container>
         </div>
       </div>
     </div>

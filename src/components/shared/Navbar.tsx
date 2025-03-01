@@ -11,7 +11,7 @@ const navLinks = [
   },
   {
     label: "Behind the Mission",
-    href: "/",
+    href: "/our-purpose",
   },
   {
     label: "Expression Gallery",
@@ -27,7 +27,7 @@ const navLinks = [
   },
   {
     label: "Social Expressions",
-    href: "/",
+    href: "/contact",
   },
 ];
 

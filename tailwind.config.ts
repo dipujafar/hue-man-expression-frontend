@@ -58,6 +58,8 @@ export default {
         poppins: ["var(--font-poppins)", "sans-serif"],
         baloo: ["var(--font-baloo)", "sans-serif"],
         lora: ["var(--font-lora)", "sans-serif"],
+        montserrat: ["var(--font-montserrat)", "sans-serif"],
+        madimi: ["var(--font-madimi)", "sans-serif"],
         lucida: [
           '"Lucida Sans Unicode"',
           "Lucida Grande",
