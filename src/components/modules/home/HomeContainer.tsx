@@ -5,6 +5,7 @@ import RepresentationSection from "./RepresentationSection";
 import FooterSection from "@/components/shared/FooterSection";
 import Container from "@/components/shared/Container";
 import DownloadAppSection from "./DownloadAppSection";
+import DownloadApp from "@/components/shared/DownloadApp";
 
 const HomeContainer = () => {
   return (

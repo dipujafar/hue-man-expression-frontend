@@ -202,10 +202,7 @@ const ApplicationForm = () => {
                     Preferred Payout Method For Earnings:
                   </FormLabel>
                   <FormControl>
-                    <RadioGroup
-                      onValueChange={field.onChange}
-                      className="space-y-2 "
-                    >
+                    <RadioGroup onValueChange={field.onChange} className=" ">
                       {paymentsOptions.map((option) => (
                         <label
                           key={option.value}
@@ -235,10 +232,7 @@ const ApplicationForm = () => {
                     Do You Currently Use Any Hue-Man Expressions Products?
                   </FormLabel>
                   <FormControl>
-                    <RadioGroup
-                      onValueChange={field.onChange}
-                      className="space-y-2"
-                    >
+                    <RadioGroup onValueChange={field.onChange} className="">
                       {productUsageOptions.map((option) => (
                         <label
                           key={option.value}
