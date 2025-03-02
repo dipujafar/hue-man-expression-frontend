@@ -60,6 +60,8 @@ export default {
         lora: ["var(--font-lora)", "sans-serif"],
         montserrat: ["var(--font-montserrat)", "sans-serif"],
         madimi: ["var(--font-madimi)", "sans-serif"],
+        merienda: ["var(--font-merienda)", "sans-serif"],
+        outfit: ["var(--font-outfit)", "sans-serif"],
         lucida: [
           '"Lucida Sans Unicode"',
           "Lucida Grande",

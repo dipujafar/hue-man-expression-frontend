@@ -6,9 +6,11 @@ import {
   Lora,
   Montserrat,
   Madimi_One,
+  Merienda,
+  Outfit,
 } from "next/font/google";
 import Footer from "@/components/shared/Footer";
-import Navbar from "@/components/shared/Navbar";
+import Navbar from "@/components/shared/navbar/Navbar";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -42,6 +44,20 @@ const madimi = Madimi_One({
   display: "swap",
 });
 
+const merienda = Merienda({
+  subsets: ["latin"],
+  variable: "--font-merienda",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Hue Man Expression",
   description: "The Official Website for Hue Man Expression",
@@ -55,7 +71,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} ${balooChettan2.variable} ${lora.variable} ${montserrat.variable} ${madimi.variable} antialiased max-w-[2520px] mx-auto`}
+        className={`${poppins.className} ${balooChettan2.variable} ${lora.variable} ${montserrat.variable} ${madimi.variable} ${merienda.variable} ${outfit.variable} antialiased max-w-[2520px] mx-auto`}
       >
         <Navbar></Navbar>
         <div className="min-h-[calc(100vh-105px)] page-margin bg-main-bg-color">

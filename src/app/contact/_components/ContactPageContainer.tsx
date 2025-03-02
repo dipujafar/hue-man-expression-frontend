@@ -5,7 +5,6 @@ import ContactForm from "./ContactForm";
 import Container from "@/components/shared/Container";
 import waterMarkImage1 from "@/assets/terms/waterMarkImage1.png";
 import waterMarkImage2 from "@/assets/terms/waterMarkImage2.png";
-import waterMarkImage3 from "@/assets/terms/waterMarkImage4.png";
 import waterMarkImage4 from "@/assets/terms/waterMarkImage5.png";
 import Image from "next/image";
 

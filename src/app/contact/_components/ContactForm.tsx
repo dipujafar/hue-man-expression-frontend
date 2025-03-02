@@ -79,7 +79,7 @@ const ContactForm = () => {
                     <Input
                       placeholder="Your Name"
                       {...field}
-                      className="focus-visible:ring-1 focus-visible:ring-[#684B3C] focus-visible:ring-offset-0 md:py-6"
+                      className="focus-visible:ring-1 focus-visible:ring-[#684B3C] focus-visible:ring-offset-0 md:py-6 rounded-none"
                     />
                   </FormControl>
                   <FormMessage />
@@ -95,7 +95,7 @@ const ContactForm = () => {
                     <Input
                       placeholder="Your Email"
                       {...field}
-                      className="focus-visible:ring-1 focus-visible:ring-[#684B3C] focus-visible:ring-offset-0 md:py-6"
+                      className="focus-visible:ring-1 focus-visible:ring-[#684B3C] focus-visible:ring-offset-0 md:py-6 rounded-none"
                     />
                   </FormControl>
                   <FormMessage className="space-y-0" />
@@ -112,7 +112,7 @@ const ContactForm = () => {
                     <Input
                       placeholder="Subject"
                       {...field}
-                      className="focus-visible:ring-1 focus-visible:ring-[#684B3C] focus-visible:ring-offset-0 md:py-6"
+                      className="focus-visible:ring-1 focus-visible:ring-[#684B3C] focus-visible:ring-offset-0 md:py-6 rounded-none"
                     />
                   </FormControl>
                   <FormMessage />
@@ -130,7 +130,7 @@ const ContactForm = () => {
                       placeholder="Your Message...."
                       {...field}
                       rows={5}
-                      className="focus-visible:ring-1 focus-visible:ring-[#684B3C] focus-visible:ring-offset-0"
+                      className="focus-visible:ring-1 focus-visible:ring-[#684B3C] focus-visible:ring-offset-0 rounded-none"
                     />
                   </FormControl>
                   <FormMessage />

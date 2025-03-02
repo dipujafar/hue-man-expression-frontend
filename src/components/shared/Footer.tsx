@@ -53,7 +53,7 @@ const Footer = () => {
               <Link
                 href="https://www.instagram.com"
                 target="_blank"
-                className="border p-1 rounded-full"
+                className="border p-1 rounded-full hover:bg-[#f0f0f0] duration-500"
               >
                 <Image
                   src={instagramIcon}
@@ -64,7 +64,7 @@ const Footer = () => {
               <Link
                 href="https://www.facebook.com"
                 target="_blank"
-                className="border p-1 rounded-full"
+                className="border p-1 rounded-full hover:bg-[#f0f0f0] duration-500"
               >
                 <Image
                   src={facebookIcon}
@@ -75,7 +75,7 @@ const Footer = () => {
               <Link
                 href="https://www.tiktok.com"
                 target="_blank"
-                className="border p-1 rounded-full"
+                className="border p-1 rounded-full hover:bg-[#f0f0f0] duration-500"
               >
                 <Image src={tiktokIcon} alt="xIcon" className="size-7"></Image>
               </Link>

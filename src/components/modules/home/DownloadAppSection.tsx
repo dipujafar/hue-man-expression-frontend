@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const DownloadAppSection = () => {
   return (
-    <div className="bg-gradient-to-r from-[#715E48] to-[#84775F] py-14 relative overflow-hidden z-0">
+    <div className="bg-gradient-to-r from-[#493824] to-[#6d614a] py-14 relative overflow-hidden z-0">
       {/* Watermark Image (Absolute) */}
       <div className="absolute inset-0 z-10">
         <Image

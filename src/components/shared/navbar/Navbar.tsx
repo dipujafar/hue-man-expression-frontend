@@ -1,8 +1,9 @@
 import Image from "next/image";
 import logo from "@/assets/image/logo.png";
-import Container from "./Container";
+import Container from "../Container";
 import Link from "next/link";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
+import NavLinks from "./NavLinks";
 
 const navLinks = [
   {
@@ -19,7 +20,7 @@ const navLinks = [
   },
   {
     label: "Ambassador Program",
-    href: "/",
+    href: "/ambassador-program",
   },
   {
     label: "Representation Toolkit",
@@ -33,7 +34,7 @@ const navLinks = [
 
 const Navbar = () => {
   return (
-    <div className=" bg-primary-white overflow-x-auto] mx-auto">
+    <div className=" bg-primary-white overflow-x-auto  mx-auto">
       <Container className="flex justify-between gap-x-4 items-center  px-4 md:px-6  xl:px-16 2xl:px-28">
         <Link href={"/"}>
           <Image
@@ -44,18 +45,7 @@ const Navbar = () => {
             className="w-auto h-auto max-w-[200px] max-h-[100px]"
           />
         </Link>
-        <div className="flex gap-x-4">
-          {navLinks?.map((link, index) => (
-            <p key={index} className="group relative">
-              <Link href={link.href}>
-                <h3 className="text-primary-black hover:text-primary-blue cursor-pointer truncate ">
-                  {link.label}
-                </h3>
-              </Link>
-              <span className="absolute left-0 bottom-0 h-[2px] w-full bg-black transform scale-x-0 transition-transform duration-700 ease-in-out group-hover:scale-x-100 origin-left"></span>
-            </p>
-          ))}
-        </div>
+        <NavLinks></NavLinks>
 
         <div className="-translate-y-[2px]">
           <Link href="/sign-up">
