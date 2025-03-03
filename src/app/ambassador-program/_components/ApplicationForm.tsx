@@ -17,6 +17,8 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import bgShadowImage from "@/assets/ambassador-program/sectionBgImage.png";
 import Image from "next/image";
+import SuccessModal from "./SuccessModal";
+import { useState } from "react";
 
 const formSchema = z.object({
   name: z
@@ -33,6 +35,7 @@ const formSchema = z.object({
 });
 
 const ApplicationForm = () => {
+  const [openSuccessModal, setOpenSuccessModal] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -47,6 +50,7 @@ const ApplicationForm = () => {
 
   const onSubmit = (data: z.infer<typeof formSchema>) => {
     console.log(data);
+    setOpenSuccessModal(true);
   };
 
   const promotionOptions = [
@@ -255,13 +259,17 @@ const ApplicationForm = () => {
             {/* Submit Button */}
             <Button
               type="submit"
-              className="bg-primary-white rounded-full text-black hover:text-primary-white w-full"
+              className="bg-primary-white rounded-full text-black hover:text-primary-white w-full hover:bg-gray-700 duration-500"
             >
               Send Request
             </Button>
           </form>
         </Form>
       </div>
+      <SuccessModal
+        open={openSuccessModal}
+        setOpen={setOpenSuccessModal}
+      ></SuccessModal>
     </div>
   );
 };
