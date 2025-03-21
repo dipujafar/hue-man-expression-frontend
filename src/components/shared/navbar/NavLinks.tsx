@@ -13,7 +13,7 @@ const navLinks = [
   },
   {
     label: "Expression Gallery",
-    href: "/#",
+    href: "/expression-gallery",
   },
   {
     label: "Ambassador Program",

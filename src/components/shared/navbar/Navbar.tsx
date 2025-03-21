@@ -5,33 +5,6 @@ import Link from "next/link";
 import { Button } from "../../ui/button";
 import NavLinks from "./NavLinks";
 
-const navLinks = [
-  {
-    label: "Rooted in Representation",
-    href: "/",
-  },
-  {
-    label: "Behind the Mission",
-    href: "/our-purpose",
-  },
-  {
-    label: "Expression Gallery",
-    href: "/",
-  },
-  {
-    label: "Ambassador Program",
-    href: "/ambassador-program",
-  },
-  {
-    label: "Representation Toolkit",
-    href: "/",
-  },
-  {
-    label: "Social Expressions",
-    href: "/contact",
-  },
-];
-
 const Navbar = () => {
   return (
     <div className=" bg-primary-white overflow-x-auto  mx-auto">
