@@ -1,6 +1,8 @@
 import facebookIcon from "@/assets/icon/facebook.png";
 import instagramIcon from "@/assets/icon/instragram.png";
 import tiktokIcon from "@/assets/icon/tiktok.png";
+import tptIcon from "@/assets/icon/tpt.png";
+import etsyIcon from "@/assets/icon/etsy.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -42,6 +44,20 @@ const ContactInformation = () => {
             className="border border-black p-1 rounded-full hover:bg-[#c7a290] duration-500"
           >
             <Image src={tiktokIcon} alt="xIcon" className="size-7"></Image>
+          </Link>
+          <Link
+            href="https://www.teacherspayteachers.com/store/hue-man-expressions"
+            target="_blank"
+            className="border border-black p-1 rounded-full hover:bg-[#c7a290] duration-500"
+          >
+            <Image src={tptIcon} alt="xIcon" className="size-7"></Image>
+          </Link>
+          <Link
+            href="https://www.etsy.com/shop/HuemanExpressions?ref=dashboard-header"
+            target="_blank"
+            className="border border-black p-1 rounded-full hover:bg-[#c7a290] duration-500"
+          >
+            <Image src={etsyIcon} alt="xIcon" className="size-7"></Image>
           </Link>
         </div>
       </div>

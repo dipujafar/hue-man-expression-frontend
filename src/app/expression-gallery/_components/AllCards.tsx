@@ -1,6 +1,11 @@
 import Container from "@/components/shared/Container";
 import { Card, CardContent } from "@/components/ui/card";
 import CommonButton from "@/components/ui/common-button";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import { cardData } from "@/utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -44,9 +49,21 @@ const AllCards = () => {
           <h1>Price: $25 each</h1>
           <h1>Bundle (Boy & Girl): $45</h1>
         </div>
-        <Link href="#" className=" flex justify-center ">
-          <CommonButton>Buy Now</CommonButton>
-        </Link>
+        <div className=" flex justify-center ">
+          <Popover>
+            <PopoverTrigger asChild>
+              <CommonButton>Buy Now</CommonButton>
+            </PopoverTrigger>
+            <PopoverContent className="w-80">
+              <div className="bg-primary-white text-black p-2 mt-2 text-xl">
+                <h1>
+                  It will be redirected to the mobile application when the
+                  mobile application is published.
+                </h1>
+              </div>
+            </PopoverContent>
+          </Popover>
+        </div>
       </div>
     </Container>
   );

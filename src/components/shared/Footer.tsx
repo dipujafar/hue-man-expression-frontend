@@ -34,10 +34,10 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2 text-primary-white">
               <li>
-                <Link href="/sign-in">Log In </Link>
+                <Link href="#">Log In </Link>
               </li>
               <li>
-                <Link href="/social-expressions">Social Expressions</Link>
+                <Link href="/contact">Social Expressions</Link>
               </li>
               <li>
                 <Link href="/terms">Terms and Conditions</Link>

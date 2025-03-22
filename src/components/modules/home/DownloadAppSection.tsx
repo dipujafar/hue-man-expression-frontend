@@ -5,6 +5,9 @@ import mobileAppImage from "@/assets/home/mobileApp.png";
 import waterMarkImage from "@/assets/home/downloadAppSectionBg.png";
 import Image from "next/image";
 
+import { PopoverContent } from "@radix-ui/react-popover";
+import { Popover, PopoverTrigger } from "@/components/ui/popover";
+
 const DownloadAppSection = () => {
   return (
     <div className="bg-gradient-to-r from-[#493824] to-[#6d614a] py-14 relative overflow-hidden z-0">
@@ -30,8 +33,34 @@ const DownloadAppSection = () => {
             communication, learning, and engagement.
           </p>
           <div className="flex flex-wrap items-center gap-2">
-            <Image src={AppleStoreImage} alt="appleStoreImage" />
-            <Image src={playStoreImage} alt="playStoreImage" />
+            <div className="flex flex-wrap justify-center items-center gap-2 ">
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Image src={AppleStoreImage} alt="appleStoreImage"></Image>
+                </PopoverTrigger>
+                <PopoverContent className="w-80">
+                  <div className="bg-primary-white text-black p-2 mt-2 text-xl">
+                    <h1>
+                      It will be redirected to the mobile application when the
+                      mobile application is published.
+                    </h1>
+                  </div>
+                </PopoverContent>
+              </Popover>
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Image src={playStoreImage} alt="playStoreImage"></Image>
+                </PopoverTrigger>
+                <PopoverContent className="w-80">
+                  <div className="bg-primary-white text-black p-2 mt-2 text-xl">
+                    <h1>
+                      It will be redirected to the mobile application when the
+                      mobile application is published.
+                    </h1>
+                  </div>
+                </PopoverContent>
+              </Popover>
+            </div>
           </div>
         </div>
 
