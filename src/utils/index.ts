@@ -119,3 +119,66 @@ export const privacyPolicy = [
     ],
   },
 ];
+
+export const cardData = [
+  {
+    _id: 1,
+    image: "/cardImage1.png",
+    title: "Communication Cards (Children)",
+  },
+  {
+    _id: 2,
+    image: "/cardImage2.png",
+    title: "Diversity Cards",
+  },
+  {
+    _id: 3,
+    image: "/cardImage3.png",
+    title: "Communication Cards (Adults)",
+  },
+  {
+    _id: 4,
+    image: "/cardImage4.png",
+    title: "Action Cards",
+  },
+  {
+    _id: 5,
+    image: "/cardImage5.png",
+    title: "Emotion & Community Helper Cards",
+  },
+  {
+    _id: 6,
+    image: "/cardImage6.png",
+    title: "Behavior Cards",
+  },
+  {
+    _id: 7,
+    image: "/cardImage7.png",
+    title: "Preposition Cards",
+  },
+  {
+    _id: 8,
+    image: "/cardImage8.png",
+    title: "Potty Training Guide",
+  },
+  {
+    _id: 9,
+    image: "/cardImage9.png",
+    title: "Sequence Cards",
+  },
+  {
+    _id: 10,
+    image: "/cardImage10.png",
+    title: "Safety Cards",
+  },
+  {
+    _id: 11,
+    image: "/cardImage11.png",
+    title: "Sensory Cards",
+  },
+  {
+    _id: 12,
+    image: "/cardImage12.png",
+    title: "Social Story Cards",
+  },
+];

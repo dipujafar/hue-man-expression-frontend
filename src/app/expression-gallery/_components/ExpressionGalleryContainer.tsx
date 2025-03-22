@@ -1,6 +1,8 @@
 import Container from "@/components/shared/Container";
 import PageTitle from "@/components/shared/PageTitle";
 import BuyNowSection from "./BuyNowSection";
+import AllCards from "./AllCards";
+import ImportantInformation from "./ImportantInformation";
 
 const ExpressionGalleryContainer = () => {
   return (
@@ -9,7 +11,7 @@ const ExpressionGalleryContainer = () => {
       <div className="relative">
         <div className="lg:space-y-20 space-y-10">
           <PageTitle title="Representation Reflects the Beauty of Our Reality"></PageTitle>
-          <Container className="lg:space-y-10 space-y-6">
+          <Container className="lg:space-y-10 space-y-6 font-lucida">
             <p className="lg:text-3xl text-xl text-center text-[#482F10]">
               Experience the full power of Hue-man Expressions with
               our All-Inclusive Deck! This comprehensive package gives you
@@ -41,6 +43,12 @@ const ExpressionGalleryContainer = () => {
           </Container>
           <Container>
             <BuyNowSection></BuyNowSection>
+          </Container>
+          <Container>
+            <AllCards></AllCards>
+          </Container>
+          <Container>
+            <ImportantInformation></ImportantInformation>
           </Container>
         </div>
       </div>

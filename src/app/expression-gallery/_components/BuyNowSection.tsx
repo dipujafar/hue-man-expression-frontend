@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 const BuyNowSection = () => {
   return (
-    <div className="relative border-2 ">
+    <div className="relative ">
       <Image
         src={SectionBg}
         alt="sectionBgImage"
@@ -21,7 +21,7 @@ const BuyNowSection = () => {
               today for just $100 and unlock a world of representation and
               learning!
             </p>
-            <Link href="/sign-up">
+            <Link href="#">
               <Button className="relative overflow-hidden rounded-full bg-gradient-to-b  from-amber-800/90  via-amber-700/90  to-amber-500/90 lg:px-14 px-8  md:py-6 py-2 h-7  md:text-lg text-[12px]  font-medium  text-white  shadow-[0_0_15px_rgba(251,191,36,0.5)] backdrop-blur-sm  transition-all  hover:shadow-[0_0_20px_rgba(251,191,36,0.6)] /95 w-fit ">
                 Buy Now
               </Button>
