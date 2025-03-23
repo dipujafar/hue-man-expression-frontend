@@ -49,7 +49,7 @@ const SmallDeviceView = () => {
                   {/* Background Hover Effect */}
                   <span
                     className={cn(
-                      "absolute inset-0 bg-black/10 transform scale-x-0 transition-transform duration-700 ease-in-out group-hover:scale-x-100",
+                      "absolute inset-0 bg-black/10 transform scale-x-0 transition-transform duration-700 ease-in-out group-hover:scale-x-100 ",
                       "z-0",
                       currentPath === link.href && "scale-x-100"
                     )}
@@ -59,7 +59,7 @@ const SmallDeviceView = () => {
                   <Link
                     href={link.href}
                     className={cn(
-                      "relative uppercase py-2 px-6 font-medium z-10 transition-colors duration-300"
+                      "relative uppercase py-2 px-6 font-medium z-10 transition-colors duration-300 truncate"
                     )}
                   >
                     {link.label}

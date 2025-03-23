@@ -68,7 +68,7 @@ const BannerSection = () => {
                     height={2400}
                     alt="banner_image"
                     quality={100}
-                    className=" w-full max-w-[2500px] rounded-3xl max-h-[350px] md:max-h-[400px] lg:max-h-[580px] xl:max-h-[650px] 2xl:max-h-[700px]"
+                    className=" w-full max-w-[2500px] rounded-3xl max-h-[450px] md:max-h-[500px] lg:max-h-[680px] xl:max-h-[750px] 2xl:max-h-[900px]"
                   />
                 </CarouselItem>
               ))}

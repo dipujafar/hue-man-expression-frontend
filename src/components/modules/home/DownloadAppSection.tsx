@@ -21,10 +21,12 @@ const DownloadAppSection = () => {
       </div>
 
       {/* Content */}
-      <Container className="relative flex justify-between items-center z-20">
-        <div className="space-y-3 text-primary-white flex-1">
-          <h1 className="text-5xl font-bold text-[#C38119]">Download</h1>
-          <h1 className="text-5xl font-bold"> Our App TODAY!</h1>
+      <Container className="relative flex flex-col-reverse lg:flex-row justify-between items-center z-20">
+        <div className="md:space-y-3 space-y-1 text-primary-white flex-1">
+          <h1 className="md:text-5xl text-2xl  font-bold text-[#C38119]">
+            Download
+          </h1>
+          <h1 className="md:text-5xl text-2xl font-bold"> Our App TODAY!</h1>
           <p className="max-w-xl">
             The Hue-man Expressions App is a groundbreaking digital platform
             designed to address the gap in representation within educational and
