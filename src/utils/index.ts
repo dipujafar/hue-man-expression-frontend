@@ -125,60 +125,164 @@ export const cardData = [
     _id: 1,
     image: "/cardImage1.png",
     title: "Communication Cards (Children)",
+    hoverTitle:
+      "Help children with speech limitations express common wants and needs.",
+    total_card: "36",
+    description: {
+      title: "Illustrated Phrases",
+      description: [
+        "• More, All Done, Eat, Drink, Play, Walk, Wait, Quiet Mouth, Sit, Calm Body, Hey, Help, Ready Hands, I Want, Sleepy, Loud, Hurt, Clean Up (Girl & Boy versions)",
+      ],
+    },
   },
   {
     _id: 2,
     image: "/cardImage2.png",
     title: "Diversity Cards",
+    hoverTitle:
+      "Represent various ethnicities for inclusivity in therapy and education.",
+    total_card: "11",
+    description: {
+      title: "Illustrated Phrases",
+      description: [
+        "• Yes, Eat, More, No, Drink, Help, Open, I Want, All Done, Thank You, Hey",
+      ],
+    },
   },
   {
     _id: 3,
     image: "/cardImage3.png",
     title: "Communication Cards (Adults)",
+    hoverTitle: "Support independence and dignity in communication for adults.",
+    total_card: "31",
+    description: {
+      title: "Illustrated Phrases",
+      description: [
+        "• More, All Done, Eat, Drink, Sick, Music, Wait, Quiet Mouth, Calm Body, Hey, Help, iPad Time, I Want, Sleepy, Loud, Hurt (Woman & Man versions)",
+      ],
+    },
   },
   {
     _id: 4,
     image: "/cardImage4.png",
     title: "Action Cards",
+    hoverTitle:
+      "Grow language and communication skills through action-based visuals.",
+    total_card: "25",
+    description: {
+      title: "Illustrated Actions",
+      description: [
+        "• Writing, Sleeping, Reading, Throwing, Brushing Teeth, Jumping, Swinging, Smiling, Crying, Climbing, Washing Hands, Playing (Boy)",
+        "• Knocking, Clapping, Hugging, Blowing, Throwing, Cleaning, Pulling, Kicking, Sitting, Eating, Walking (Girl)",
+      ],
+    },
   },
   {
     _id: 5,
     image: "/cardImage5.png",
     title: "Emotion & Community Helper Cards",
+    hoverTitle:
+      "Promote social learning by identifying emotions and roles within a community.",
+    total_card: "20 (12 Emotion Cards, 8 Community Helper Cards)",
+    description: {
+      title: "Illustrated Cards",
+      description: [
+        "• Emotions: Happy, Silly, Tired, Hurt, Mad, Bored, Sick, Sad, Surprised, Sleepy, Scared, Shy",
+        "• Community Helpers: Teacher, Chef, Bus Driver, Firefighter, Mailman, Dentist, Police Officer, Doctor",
+      ],
+    },
   },
   {
     _id: 6,
     image: "/cardImage6.png",
     title: "Behavior Cards",
+    hoverTitle: "Model positive behaviors and promote self-regulation.",
+    total_card: "14",
+    description: {
+      title: "Illustrated Behaviors",
+      description: [
+        "• Listen, No Biting, Nice Hands, Work, No Yelling, No Fighting, Sit (Girl & Boy versions)",
+      ],
+    },
   },
   {
     _id: 7,
     image: "/cardImage7.png",
     title: "Preposition Cards",
+    hoverTitle:
+      "Teach children to communicate details about location, time, and position.",
+    total_card: "6",
+    description: {
+      title: "Illustrated Prepositions",
+      description: ["• In, Behind, Out, Under, Next To, In Front"],
+    },
   },
   {
     _id: 8,
     image: "/cardImage8.png",
     title: "Potty Training Guide",
+    hoverTitle: "Simplify potty training with step-by-step visuals.",
+    total_card: "4",
+    description: {
+      title: "Illustrated Steps",
+      description: [
+        "• Sit on Toilet, Wipe with Toilet Paper, Flush Toilet, Wash Hands",
+      ],
+    },
   },
   {
     _id: 9,
     image: "/cardImage9.png",
     title: "Sequence Cards",
+    hoverTitle:
+      "Build organizational and processing skills through sequential visuals.",
+    total_card: "4",
+    description: {
+      title: "Illustrated Sequences",
+      description: [
+        "• Making the Bed, Brushing Teeth, Washing Hair, Going to the Barber Shop",
+      ],
+    },
   },
   {
     _id: 10,
     image: "/cardImage10.png",
     title: "Safety Cards",
+    hoverTitle:
+      "Help children learn and practice safety precautions in everyday scenarios.",
+    total_card: "4",
+    description: {
+      title: "Illustrated Safety Tips",
+      description: [
+        "• Don’t Run into the Street, Stay on the Sidewalk, Look Both Ways Before Crossing, Stop at the Street",
+      ],
+    },
   },
   {
     _id: 11,
-    image: "/cardImage11.png",
+    image: "/cardImage12.png",
     title: "Sensory Cards",
+    hoverTitle: "Support sensory processing through fun, engaging activities.",
+    total_card: "4",
+    description: {
+      title: "Illustrated Activities",
+      description: [
+        "• Tickles, Play in Sand, Jump on Trampoline, Jump on Ball",
+      ],
+    },
   },
   {
     _id: 12,
-    image: "/cardImage12.png",
+    image: "/cardImage11.png",
     title: "Social Story Cards",
+    hoverTitle:
+      "Prepare for real-life situations with detailed, relatable scenarios.",
+    total_card: "39",
+    description: {
+      title: "Illustrated Scenarios",
+      description: [
+        "• Taking Turns, Feeling Comfortable on My Period, Stranger Safety, My Private Time (Masturbation), Taking a Shower",
+      ],
+    },
   },
 ];
