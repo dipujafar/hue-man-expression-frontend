@@ -32,7 +32,7 @@ DialogOverlay.displayName = DialogPrimitive.Overlay.displayName;
 const DialogContent = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content>
-  // @ts-ignore
+  //@ts-expect-error
 >(({ className, children, showCloseIcon = false, ...props }, ref) => (
   <DialogPortal>
     <DialogOverlay />

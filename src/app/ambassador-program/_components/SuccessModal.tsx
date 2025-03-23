@@ -1,6 +1,5 @@
-import { Dialog, DialogContent, DialogHeader } from "@/components/ui/dialog";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Check } from "lucide-react";
-import React, { Dispatch } from "react";
 
 const SuccessModal = ({
   open,

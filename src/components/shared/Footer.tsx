@@ -5,6 +5,8 @@ import facebookIcon from "@/assets/icon/facebook.png";
 import instagramIcon from "@/assets/icon/instragram.png";
 import tiktokIcon from "@/assets/icon/tiktok.png";
 import Container from "./Container";
+import tptIcon from "@/assets/icon/tpt.png";
+import etsyIcon from "@/assets/icon/etsy.png";
 
 const Footer = () => {
   return (
@@ -34,7 +36,7 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2 text-primary-white">
               <li>
-                <Link href="#">Log In </Link>
+                <Link href="#">Log-in </Link>
               </li>
               <li>
                 <Link href="/contact">Social Expressions</Link>
@@ -77,7 +79,29 @@ const Footer = () => {
                 target="_blank"
                 className="border p-1 rounded-full hover:bg-[#f0f0f0] duration-500"
               >
-                <Image src={tiktokIcon} alt="xIcon" className="size-7"></Image>
+                <Image
+                  src={tiktokIcon}
+                  alt="tiktokicon"
+                  className="size-7"
+                ></Image>
+              </Link>
+              <Link
+                href="https://www.teacherspayteachers.com/store/hue-man-expressions"
+                target="_blank"
+                className="border p-1 rounded-full hover:bg-[#f0f0f0] duration-500"
+              >
+                <Image
+                  src={tptIcon}
+                  alt="tptIconIcon"
+                  className="size-7"
+                ></Image>
+              </Link>
+              <Link
+                href="https://www.etsy.com/shop/HuemanExpressions?ref=dashboard-header"
+                target="_blank"
+                className="border p-1 rounded-full hover:bg-[#f0f0f0] duration-500"
+              >
+                <Image src={etsyIcon} alt="etsyIcon" className="size-7"></Image>
               </Link>
             </div>
           </div>

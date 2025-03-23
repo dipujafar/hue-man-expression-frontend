@@ -15,13 +15,18 @@ const TermsConditions = () => {
               → {term?.question}
             </h2>
             <ul className="space-y-1">
-              {term?.subtitle?.map((answer) => (
-                <li className="md:text-xl text-lg">{answer}</li>
+              {term?.subtitle?.map((answer, index) => (
+                <li key={index} className="md:text-xl text-lg">
+                  {answer}
+                </li>
               ))}
             </ul>
             <ul className="space-y-1">
-              {term?.answer?.map((answer) => (
-                <li className="flex xl:items-center md:text-xl text-lg gap-x-1">
+              {term?.answer?.map((answer, index) => (
+                <li
+                  key={index}
+                  className="flex xl:items-center md:text-xl text-lg gap-x-1"
+                >
                   <Dot size={20} className="size-5"></Dot>
                   {answer}
                 </li>

@@ -156,7 +156,7 @@ const ApplicationForm = () => {
             <FormField
               control={form.control}
               name="promotions"
-              render={({ field }) => (
+              render={() => (
                 <FormItem>
                   <FormLabel className="text-primary-white capitalize font-outfit text-lg">
                     How Do You Plan to Promote Our Materials?

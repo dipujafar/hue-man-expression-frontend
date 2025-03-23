@@ -14,8 +14,7 @@ const information = [
   },
   {
     _id: 3,
-    description:
-      "Print Limits: Each deck has a specific print limit to ensure ethical use.",
+    description: "Print Limits: Each deck has a specific print limit of 10.",
   },
   {
     _id: 4,

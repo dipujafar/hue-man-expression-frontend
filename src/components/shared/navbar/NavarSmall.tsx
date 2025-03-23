@@ -40,8 +40,9 @@ const SmallDeviceView = () => {
               viewport={{ once: true }}
               className="flex flex-col gap-y-2 items-center mt-3"
             >
-              {navLinks.map((link) => (
+              {navLinks.map((link, index) => (
                 <motion.li
+                  key={index}
                   variants={childrenVariants}
                   className="group relative overflow-hidden"
                 >

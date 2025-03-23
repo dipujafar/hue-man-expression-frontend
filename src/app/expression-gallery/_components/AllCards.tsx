@@ -33,7 +33,7 @@ const AllCards = () => {
           </div>
         ))}
       </div>
-      <Card className="max-w-[400px] mx-auto  lg:mt-14 mt-9">
+      <Card className="max-w-[440px] mx-auto  lg:mt-14 mt-9">
         <CardContent className="pt-6">
           <Image
             src={"/cardImag13.png"}
@@ -42,6 +42,9 @@ const AllCards = () => {
             height={1200}
             className="max-h-[530px]"
           ></Image>
+          <h5 className="text-center mt-3 text-lg text-[#684B3C] truncate font-lucida">
+            AAC Core Board Lanyards (Sold Separately)
+          </h5>
         </CardContent>
       </Card>
       <div className="lg:mt-10 mt-5 space-y-5">
