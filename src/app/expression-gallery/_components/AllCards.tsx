@@ -39,7 +39,7 @@ const AllCards = () => {
               </HoverCardTrigger>
               <HoverCardContent className=" lg:w-full w-[250px] max-w-lg">
                 <div className="space-y-2">
-                  <h1 className="text-xl font-medium text-center text-[#684B3C]">
+                  <h1 className="md:text-xl font-medium md:text-center text-[#684B3C]">
                     {data?.hoverTitle}
                   </h1>
                   <div>
@@ -96,7 +96,7 @@ const AllCards = () => {
         </HoverCardTrigger>
         <HoverCardContent className=" lg:w-full w-[250px] max-w-lg">
           <div className="space-y-2">
-            <h1 className="text-xl font-medium text-center text-[#684B3C]">
+            <h1 className="md:text-xl font-medium md:text-center text-[#684B3C]">
               Portable boards featuring essential vocabulary for communication.
             </h1>
             <div>
@@ -106,7 +106,7 @@ const AllCards = () => {
             </div>
 
             <div className="space-y-1">
-              <h5 className="text-lg font-medium">
+              <h5 className="MD:text-lg md:font-medium">
                 Illustrated Terms: Visuals may vary across boy and girl boards
               </h5>
               <p>

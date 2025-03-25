@@ -37,7 +37,7 @@ const RepresentationSection = () => {
       <div className="absolute top-0 left-0 z-1">
         <Image src={designImage} alt="designImage" className="!z-[1]" />
       </div>
-      <div className="absolute -bottom-1 right-0 z-1">
+      <div className="absolute -bottom-1 right-0 z-1 hidden md:block">
         <Image src={designImage2} alt="designImage" className="!z-[1]" />
       </div>
     </div>
