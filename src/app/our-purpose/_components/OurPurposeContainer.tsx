@@ -15,7 +15,7 @@ import FooterSection from "@/components/shared/FooterSection";
 const OurPurposeContainer = () => {
   return (
     <div className="relative !z-[99]">
-      <div className="space-y-12 lg:space-y-40">
+      <div className="space-y-10 lg:space-y-32">
         <PageTitle title="Our Purpose"></PageTitle>
         <Container>
           <Mission></Mission>

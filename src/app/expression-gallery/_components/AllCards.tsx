@@ -104,7 +104,6 @@ const AllCards = () => {
                 Price: $25 each | Bundle (Boy & Girl): $45
               </p>
             </div>
-
             <div className="space-y-1">
               <h5 className="MD:text-lg md:font-medium">
                 Illustrated Terms: Visuals may vary across boy and girl boards

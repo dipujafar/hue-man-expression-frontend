@@ -3,14 +3,14 @@ import InfoSection from "@/components/shared/InfoSection";
 
 const Founder = () => {
   return (
-    <div className="">
+    <div>
       <InfoSection
         image={sectionImage}
         title="Founder Spotlight"
         contentClass="flex flex-col  max-w-2xl"
-        descriptionClass="text-primary-black "
+        descriptionClass="text-primary-black"
         waterMarkClass="-bottom-16 right-0"
-        imageClass="w-auto"
+        // imageClass="w-auto"
       >
         <div className="space-y-5">
           <p>

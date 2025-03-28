@@ -9,7 +9,6 @@ import waterMarkImage1 from "@/assets/our-purpose/waterMarkImage1.png";
 import waterMarkImage2 from "@/assets/our-purpose/waterMarkImage2.png";
 import waterMarkImage3 from "@/assets/our-purpose/waterMarkImage3.png";
 import waterMarkImage4 from "@/assets/our-purpose/waterMarkImage4.png";
-import waterMarkImage5 from "@/assets/our-purpose/waterMarkImage5.png";
 import waterMarkImage6 from "@/assets/our-purpose/waterMarkImage6.png";
 import Image from "next/image";
 

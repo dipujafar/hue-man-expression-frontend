@@ -10,7 +10,7 @@ const AboutUs = () => {
         contentClass="flex flex-col  max-w-2xl"
         descriptionClass="text-primary-black "
         waterMarkClass="-bottom-16 right-0"
-        imageClass="w-auto justify-self-end"
+        // imageClass="w-auto justify-self-end"
         className=" lg:flex-row-reverse"
       >
         <div className="space-y-5">

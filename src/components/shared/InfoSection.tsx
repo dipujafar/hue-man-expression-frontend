@@ -50,17 +50,17 @@ const InfoSection = ({
     <Container>
       <div
         className={cn(
-          "flex flex-col lg:flex-row xl:gap-x-10 gap-x-5 gap-y-16 ",
+          "flex flex-col lg:flex-row  xl:gap-x-10 gap-x-5 lg:gap-y-12 gap-y-7 ",
           className
         )}
       >
         {/* image and watermark */}
-        <div className="relative w-fit flex-1">
+        <div className="relative w-fit flex-1 mx-auto">
           <MovementElement duration={1.3}>
             <Image
               src={image}
               alt="banner-image"
-              className={cn(" w-full", imageClass)}
+              className={cn("w-full ", imageClass)}
             ></Image>
           </MovementElement>
 

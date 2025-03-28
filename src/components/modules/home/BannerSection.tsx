@@ -81,7 +81,7 @@ const BannerSection = () => {
             <p className="lg:text-5xl text-xl text-center font-lucida">
               Empowering communication. Celebrating diversity. Changing lives.
             </p>
-            <CommonButton>Explore the App</CommonButton>
+            <CommonButton className="">Explore the App</CommonButton>
           </div>
         </div>
 
