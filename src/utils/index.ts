@@ -158,7 +158,7 @@ export const cardData = [
     description: {
       title: "Illustrated Phrases",
       description: [
-        "• More, All Done, Eat, Drink, Sick, Music, Wait, Quiet Mouth, Calm Body, Hey, Help, iPad Time, I Want, Sleepy, Loud, Hurt (Woman & Man versions)",
+        "• More, All Done, Eat, Drink, Sick, Music, Wait, Quiet Mouth, Calm Body, Hey, Help, iPad Time, I Want, Sleepy, Loud, Hurt (Women & Men versions)",
       ],
     },
   },
