@@ -12,7 +12,7 @@ export default function SidebarNavigation() {
     
     console.log(pathName);
   return (
-    <div className="min-h-screen w-72 bg-[#AA9880] lg:flex flex-col py-8 px-6 hidden ">
+    <div className="h-screen  w-72 bg-[#AA9880] lg:flex flex-col py-8 xl:px-6 px-4 hidden overflow-y-auto ">
       {/* Logo */}
       <div className="flex justify-center mb-6">
         <Link href="/">

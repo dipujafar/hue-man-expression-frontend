@@ -134,11 +134,13 @@ export const cardData = [
         "• More, All Done, Eat, Drink, Play, Walk, Wait, Quiet Mouth, Sit, Calm Body, Hey, Help, Ready Hands, I Want, Sleepy, Loud, Hurt, Clean Up (Girl & Boy versions)",
       ],
     },
+    print: "6",
   },
   {
     _id: 2,
     image: "/cardImage2.png",
     title: "Diversity Cards",
+    print: "4",
     hoverTitle:
       "Represent various ethnicities for inclusivity in therapy and education.",
     total_card: "11",
@@ -153,6 +155,7 @@ export const cardData = [
     _id: 3,
     image: "/cardImage3.png",
     title: "Communication Cards (Adults)",
+    print: "8",
     hoverTitle: "Support independence and dignity in communication for adults.",
     total_card: "31",
     description: {
@@ -166,6 +169,7 @@ export const cardData = [
     _id: 4,
     image: "/cardImage4.png",
     title: "Action Cards",
+    print: "3",
     hoverTitle:
       "Grow language and communication skills through action-based visuals.",
     total_card: "25",
@@ -181,6 +185,7 @@ export const cardData = [
     _id: 5,
     image: "/cardImage5.png",
     title: "Emotion & Community Helper Cards",
+    print: "5",
     hoverTitle:
       "Promote social learning by identifying emotions and roles within a community.",
     total_card: "20 (12 Emotion Cards, 8 Community Helper Cards)",
@@ -196,6 +201,7 @@ export const cardData = [
     _id: 6,
     image: "/cardImage6.png",
     title: "Behavior Cards",
+    print: "7",
     hoverTitle: "Model positive behaviors and promote self-regulation.",
     total_card: "14",
     description: {
@@ -209,6 +215,7 @@ export const cardData = [
     _id: 7,
     image: "/cardImage7.png",
     title: "Preposition Cards",
+    print: "4",
     hoverTitle:
       "Teach children to communicate details about location, time, and position.",
     total_card: "6",
@@ -221,6 +228,7 @@ export const cardData = [
     _id: 8,
     image: "/cardImage8.png",
     title: "Potty Training Guide",
+    print: "3",
     hoverTitle: "Simplify potty training with step-by-step visuals.",
     total_card: "4",
     description: {
@@ -237,6 +245,7 @@ export const cardData = [
     hoverTitle:
       "Build organizational and processing skills through sequential visuals.",
     total_card: "4",
+    print: "2",
     description: {
       title: "Illustrated Sequences",
       description: [
@@ -251,6 +260,7 @@ export const cardData = [
     hoverTitle:
       "Help children learn and practice safety precautions in everyday scenarios.",
     total_card: "4",
+    print: "8",
     description: {
       title: "Illustrated Safety Tips",
       description: [
@@ -262,6 +272,7 @@ export const cardData = [
     _id: 11,
     image: "/cardImage12.png",
     title: "Sensory Cards",
+    print: "10",
     hoverTitle: "Support sensory processing through fun, engaging activities.",
     total_card: "4",
     description: {
@@ -275,6 +286,7 @@ export const cardData = [
     _id: 12,
     image: "/cardImage11.png",
     title: "Social Story Cards",
+    print: "5",
     hoverTitle:
       "Prepare for real-life situations with detailed, relatable scenarios.",
     total_card: "39",

@@ -28,19 +28,8 @@ const BuyNowSection = () => {
               learning!
             </p>
 
-            <Popover>
-              <PopoverTrigger asChild>
-                <CommonButton>Buy Now</CommonButton>
-              </PopoverTrigger>
-              <PopoverContent className="w-80">
-                <div className="bg-primary-white text-black p-2 mt-2 text-xl">
-                  <h1>
-                    It will be redirected to the mobile application when the
-                    mobile application is published.
-                  </h1>
-                </div>
-              </PopoverContent>
-            </Popover>
+            <CommonButton>Buy Now</CommonButton>
+            
           </div>
         </div>
       </div>

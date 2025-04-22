@@ -1,11 +1,9 @@
-import React from 'react';
+import ExpressionHubPageContainer from './_components/ExpressionHubPageContainer';
 
-const ExpressionsHub = () => {
+const ExpressionsHubPage = () => {
     return (
-        <div>
-            <h1>jj</h1>
-        </div>
+       <ExpressionHubPageContainer></ExpressionHubPageContainer>
     );
 };
 
-export default ExpressionsHub;
+export default ExpressionsHubPage;

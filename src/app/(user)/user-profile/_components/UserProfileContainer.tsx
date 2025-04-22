@@ -34,7 +34,7 @@ const UserProfileContainer = () => {
         </div>
       </div>
     </div>
-    );
+    );  
 };
 
 export default UserProfileContainer;
