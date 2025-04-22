@@ -93,3 +93,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+.scroll-hide::-webkit-scrollbar {
+  scrollbar-width: none;
+}

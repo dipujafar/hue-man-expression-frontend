@@ -13,6 +13,7 @@ import {
   childrenVariants,
   parentVariants,
 } from "@/animation/FramerMotionValiants";
+import { Button } from "@/components/ui/button";
 
 const SmallDeviceView = () => {
   const currentPath = usePathname();
@@ -66,6 +67,30 @@ const SmallDeviceView = () => {
                   </Link>
                 </motion.li>
               ))}
+
+              <motion.li
+                variants={childrenVariants}
+                className="group relative overflow-hidden"
+              >
+                {/* Background Hover Effect */}
+                <span
+                  className={cn(
+                    "absolute inset-0 bg-black/10 transform scale-x-0 transition-transform duration-700 ease-in-out group-hover:scale-x-100 ",
+                    "z-0",
+                    currentPath === "/login" && "scale-x-100"
+                  )}
+                ></span>
+
+                {/* Navigation Link */}
+                <Link
+                  href={"/login"}
+                  className={cn(
+                    "relative uppercase py-2 px-6 font-medium z-10 transition-colors duration-300 truncate"
+                  )}
+                >
+                  Login
+                </Link>
+              </motion.li>
             </motion.ul>
           </motion.div>
 

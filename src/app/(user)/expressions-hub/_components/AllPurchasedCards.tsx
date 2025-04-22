@@ -6,7 +6,7 @@ import Image from "next/image";
 const AllPurchasedCards = () => {
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:gap-14 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:gap-10 gap-3">
         {cardData?.map((data) => (
           <div key={data?._id}>
             <Card
@@ -14,7 +14,7 @@ const AllPurchasedCards = () => {
                 boxShadow: "0px 0.411px 10.278px 0px rgba(0, 0, 0, 0.15)",
               }}
             >
-              <CardContent className="pt-6 cursor-pointer ">
+              <CardContent className="pt-6  ">
                 <div className="flex items-center gap-2 justify-end xl:text-xl mb-3 font-merienda text-[#684B3C] " >
                   <Printer />
                   <h1>{data?.print}  Print remaining</h1>

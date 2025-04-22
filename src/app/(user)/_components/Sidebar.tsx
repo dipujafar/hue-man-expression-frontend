@@ -1,107 +1,126 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { Home, Settings,  ImageIcon } from "lucide-react";
+import { Home, Settings, ImageIcon } from "lucide-react";
 import logo from "@/assets/image/logo.png";
 import Greeting from "./Greeting";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import SmallDeviceSidebar from "./SmallDeviceSidebar";
 
 export default function SidebarNavigation() {
-    const pathName = usePathname();
-    
-    console.log(pathName);
+  const pathName = usePathname();
+
   return (
-    <div className="h-screen  w-72 bg-[#AA9880] lg:flex flex-col py-8 xl:px-6 px-4 hidden overflow-y-auto ">
-      {/* Logo */}
-      <div className="flex justify-center mb-6">
-        <Link href="/">
-          <div>
+    <div>
+     
+      <div className="h-screen  w-72 bg-[#AA9880] lg:flex flex-col py-8 xl:px-6 px-4 hidden overflow-y-auto scroll-hide ">
+        {/* Logo */}
+        <div className="flex justify-center mb-6">
+          <Link href="/">
+            <div>
+              <Image
+                src={logo}
+                alt="Company Logo"
+                width={1200}
+                height={1200}
+                className=" max-w-40"
+              />
+            </div>
+          </Link>
+        </div>
+
+        {/* Profile */}
+        <div className="flex flex-col items-center mb-8">
+          <div className="size-32 rounded-full overflow-hidden mb-2 border-8 border-[#A99E90]  flex-center">
             <Image
-              src={logo}
-              alt="Company Logo"
+              src="/user-profile.png"
+              alt="User Avatar"
               width={1200}
               height={1200}
-              className=" max-w-40"
+              className="size-24 rounded-full object-cover"
             />
           </div>
-        </Link>
-      </div>
-
-      {/* Profile */}
-      <div className="flex flex-col items-center mb-8">
-        <div className="size-32 rounded-full overflow-hidden mb-2 border-8 border-[#A99E90]  flex-center">
-          <Image
-            src="/user-profile.png"
-            alt="User Avatar"
-            width={1200}
-            height={1200}
-            className="size-24 rounded-full object-cover"
-          />
+          <div className="text-center">
+            <Greeting></Greeting>
+            <p className=" font-medium">Istiak Ahmed</p>
+          </div>
         </div>
-        <div className="text-center">
-          <Greeting></Greeting>
-          <p className=" font-medium">Istiak Ahmed</p>
+
+        {/* Overview Navigation */}
+        <div className="mb-8">
+          <h3 className=" font-semibold text-gray-700 mb-4 tracking-wider">
+            OVERVIEW
+          </h3>
+          <nav className="space-y-2">
+            <Link
+              href="/user-profile"
+              className={cn(
+                "flex items-center gap-2 px-4 py-2 rounded-lg text-gray-900 hover:bg-white/50 transition-colors",
+                pathName === "/user-profile" &&
+                  "bg-white text-purple-600 font-medium"
+              )}
+            >
+              <Home size={18} />
+              <span>Profile</span>
+            </Link>
+            <Link
+              href="/expressions-hub"
+              className={cn(
+                "flex items-center gap-2 px-4 py-2 rounded-lg text-gray-900 hover:bg-white/50 transition-colors",
+                pathName === "/expressions-hub" &&
+                  "bg-white text-purple-600 font-medium"
+              )}
+            >
+              <ImageIcon size={18} />
+              <span>Hueman Expressions Hub</span>
+            </Link>
+            <Link
+              href="/expression-gallery"
+              className={cn(
+                "flex items-center gap-2 px-4 py-2 rounded-lg text-gray-900 hover:bg-white/50 transition-colors",
+                pathName === "/expression-gallery" &&
+                  "bg-white text-purple-600 font-medium"
+              )}
+            >
+              <ImageIcon size={18} />
+              <span>Expressions Gallery</span>
+            </Link>
+          </nav>
         </div>
-      </div>
 
-      {/* Overview Navigation */}
-      <div className="mb-8">
-        <h3 className=" font-semibold text-gray-700 mb-4 tracking-wider">
-          OVERVIEW
-        </h3>
-        <nav className="space-y-2">
-          <Link
-            href="/user-profile"
-            className={cn("flex items-center gap-2 px-4 py-2 rounded-lg text-gray-900 hover:bg-white/50 transition-colors", pathName === "/user-profile" && "bg-white text-purple-600 font-medium" )}
-          >
-            <Home size={18} />
-            <span>Profile</span>
-          </Link>
-          <Link
-            href="/expressions-hub"
-            className={cn("flex items-center gap-2 px-4 py-2 rounded-lg text-gray-900 hover:bg-white/50 transition-colors", pathName === "/expressions-hub" && "bg-white text-purple-600 font-medium" )}
-          >
-            <ImageIcon size={18} />
-            <span>Hueman Expressions Hub</span>
-          </Link>
-          <Link
-            href="/gallery"
-            className={cn("flex items-center gap-2 px-4 py-2 rounded-lg text-gray-900 hover:bg-white/50 transition-colors", pathName === "/expression-gallery" && "bg-white text-purple-600 font-medium" )}
-          >
-            <ImageIcon size={18} />
-            <span>Expressions Gallery</span>
-          </Link>
-        </nav>
-      </div>
-
-      {/* Settings Navigation */}
-      <div className="mt-auto">
-        <h3 className="text-xs font-semibold text-gray-700 mb-4 tracking-wider">
-          SETTINGS
-        </h3>
-        <nav className="space-y-2">
-          <Link
-            href="/settings"
-            className="flex items-center gap-2 px-4 py-2 rounded-lg text-gray-800 hover:bg-white/50 transition-colors"
-          >
-            <Settings size={18} />
-            <span>Settings</span>
-          </Link>
-          <Link
-            href="/logout"
-            className="flex items-center gap-2 px-4 py-2 rounded-lg text-red-500 hover:bg-white/50 transition-colors"
-          >
-            <LogoutIcon></LogoutIcon>
-            <span>Logout</span>
-          </Link>
-        </nav>
+        {/* Settings Navigation */}
+        <div className="mt-auto">
+          <h3 className=" font-semibold text-gray-700 mb-4 tracking-wider">
+            SETTINGS
+          </h3>
+          <nav className="space-y-2">
+            <Link
+              href="/settings"
+              className={cn(
+                "flex items-center gap-2 px-4 py-2 rounded-lg text-gray-900 hover:bg-white/50 transition-colors",
+                pathName === "/settings" &&
+                  "bg-white text-purple-600 font-medium"
+              )}
+            >
+              <Settings size={18} />
+              <span>Settings</span>
+            </Link>
+            <Link
+              href="/"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg text-red-500 hover:bg-white/50 transition-colors"
+            >
+              <LogoutIcon></LogoutIcon>
+              <span>Logout</span>
+            </Link>
+          </nav>
+        </div>
       </div>
     </div>
   );
 }
 
-function LogoutIcon() {
+export function LogoutIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
