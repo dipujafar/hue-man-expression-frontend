@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+/* body {
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
 
 @layer base {
   :root {
@@ -77,6 +77,9 @@ body {
   }
   .section-margin {
     @apply md:my-10 my-5;
+  }
+  .flex-center{
+    @apply flex justify-center items-center;
   }
 }
 

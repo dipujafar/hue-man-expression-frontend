@@ -62,6 +62,7 @@ export default {
         madimi: ["var(--font-madimi)", "sans-serif"],
         merienda: ["var(--font-merienda)", "sans-serif"],
         outfit: ["var(--font-outfit)", "sans-serif"],
+        inter: ["var(--font-inter)", "sans-serif"],
         lucida: [
           '"Lucida Sans Unicode"',
           "Lucida Grande",

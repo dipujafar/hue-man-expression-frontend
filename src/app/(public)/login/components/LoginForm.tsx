@@ -15,6 +15,8 @@ import { Button } from "@/components/ui/button";
 import bgShadowImage from "@/assets/contact/bgShadow.png";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+
 
 const formSchema = z.object({
   email: z
@@ -26,6 +28,7 @@ const formSchema = z.object({
 });
 
 const LoginForm = () => {
+const router = useRouter();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -36,6 +39,7 @@ const LoginForm = () => {
 
   const onSubmit = (data: z.infer<typeof formSchema>) => {
     console.log(data);
+    router?.push("/user-profile");
   };
   return (
     <div className="2xl:w-[30%] xl:w-[40%] md:w-[50%] w-[90%]  border lg:px-16 md:px-10 lg:py-20 py-12 px-4 bg-gradient-to-t from-[#685947] to-[#6d644f] relative overflow-hidden z-0">

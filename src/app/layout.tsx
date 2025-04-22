@@ -8,9 +8,9 @@ import {
   Madimi_One,
   Merienda,
   Outfit,
+  Inter
 } from "next/font/google";
-import Footer from "@/components/shared/Footer";
-import Navbar from "@/components/shared/navbar/Navbar";
+
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -57,6 +57,12 @@ const outfit = Outfit({
   weight: ["400", "500", "600", "700"],
   display: "swap",
 });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Hue Man Expression",
@@ -71,14 +77,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} ${balooChettan2.variable} ${lora.variable} ${montserrat.variable} ${madimi.variable} ${merienda.variable} ${outfit.variable} antialiased max-w-[2520px] mx-auto`}
+        className={`${poppins.className} ${balooChettan2.variable} ${lora.variable} ${montserrat.variable} ${madimi.variable} ${merienda.variable} ${outfit.variable} ${inter.variable} antialiased max-w-[2520px] mx-auto`}
       >
-        <Navbar></Navbar>
-        <div className="min-h-[calc(100vh-105px)] page-margin bg-main-bg-color">
-          {children}
-        </div>
-
-        <Footer></Footer>
+        {children}
       </body>
     </html>
   );

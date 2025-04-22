@@ -21,10 +21,10 @@ const RepresentationSection = () => {
               We create tools and resources designed to empower learners,
               educators, and therapists through authentic representation.
             </p>
-            <Button className="bg-primary-white text-[#684B3C] hover:text-primary-white group overflow-hidden rounded-none hover:bg-primary-white/70 hover:rounded-md">
+            {/* <Button className="bg-primary-white text-[#684B3C] hover:text-primary-white group overflow-hidden rounded-none hover:bg-primary-white/70 hover:rounded-md">
               Learn more |{" "}
               <ChevronsRight className="group-hover:translate-x-5 duration-1000" />
-            </Button>
+            </Button> */}
           </div>
           {/* Image */}
           <div className="flex-1 z-10">
