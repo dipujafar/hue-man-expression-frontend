@@ -38,7 +38,7 @@ const router = useRouter();
   });
 
   const onSubmit = (data: z.infer<typeof formSchema>) => {
-    console.log(data);
+    
     router?.push("/user-profile");
   };
   return (

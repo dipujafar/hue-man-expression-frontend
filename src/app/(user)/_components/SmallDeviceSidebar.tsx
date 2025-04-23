@@ -86,10 +86,10 @@ const SmallDeviceSidebar = () => {
                 </Link>
                 <Link
                   onClick={() => setOpen(false)}
-                  href="/expression-gallery"
+                  href="/expression-gallery-dashboard"
                   className={cn(
                     "flex items-center gap-2 px-4 py-2 rounded-lg text-gray-900 hover:bg-white/50 transition-colors",
-                    pathName === "/expression-gallery" &&
+                    pathName === "/expression-gallery-dashboard" &&
                       " text-purple-600 font-medium"
                   )}
                 >

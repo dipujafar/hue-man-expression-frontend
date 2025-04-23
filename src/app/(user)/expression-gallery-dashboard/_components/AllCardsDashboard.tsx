@@ -14,10 +14,10 @@ import {
 import { cardData } from "@/utils";
 import Image from "next/image";
 
-const AllCards = () => {
+const AllCardsDashboard = () => {
   return (
-    <Container>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 lg:gap-14 gap-9">
+    <div>
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:gap-8 gap-4">
         {cardData?.map((data) => (
           <div key={data?._id}>
             <HoverCard>
@@ -31,7 +31,7 @@ const AllCards = () => {
                       height={1200}
                       className="max-h-[530px]"
                     ></Image>
-                    <h5 className="text-center mt-3 text-lg text-[#684B3C] truncate font-lucida">
+                    <h5 className="text-center mt-3 2xl:text-lg text-sm text-[#684B3C] truncate font-lucida">
                       {data?.title}
                     </h5>
                   </CardContent>
@@ -126,8 +126,8 @@ const AllCards = () => {
           <CommonButton>Buy Now</CommonButton>
         </div>
       </div>
-    </Container>
+    </div>
   );
 };
 
-export default AllCards;
+export default AllCardsDashboard;

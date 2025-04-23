@@ -6,15 +6,13 @@ import logo from "@/assets/image/logo.png";
 import Greeting from "./Greeting";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import SmallDeviceSidebar from "./SmallDeviceSidebar";
 
 export default function SidebarNavigation() {
   const pathName = usePathname();
 
   return (
     <div>
-     
-      <div className="h-screen  w-72 bg-[#AA9880] lg:flex flex-col py-8 xl:px-6 px-4 hidden overflow-y-auto scroll-hide ">
+      <div className="h-screen  2xl:w-72 w-64 bg-[#AA9880] lg:flex flex-col py-8 xl:px-6 px-4 hidden overflow-y-auto scroll-hide ">
         {/* Logo */}
         <div className="flex justify-center mb-6">
           <Link href="/">
@@ -76,10 +74,10 @@ export default function SidebarNavigation() {
               <span>Hueman Expressions Hub</span>
             </Link>
             <Link
-              href="/expression-gallery"
+              href="/expression-gallery-dashboard"
               className={cn(
                 "flex items-center gap-2 px-4 py-2 rounded-lg text-gray-900 hover:bg-white/50 transition-colors",
-                pathName === "/expression-gallery" &&
+                pathName === "/expression-gallery-dashboard" &&
                   "bg-white text-purple-600 font-medium"
               )}
             >

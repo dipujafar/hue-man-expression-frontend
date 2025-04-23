@@ -8,9 +8,9 @@ import {
   Madimi_One,
   Merienda,
   Outfit,
-  Inter
+  Inter,
 } from "next/font/google";
-
+import { Toaster } from "sonner";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -80,6 +80,7 @@ export default function RootLayout({
         className={`${poppins.className} ${balooChettan2.variable} ${lora.variable} ${montserrat.variable} ${madimi.variable} ${merienda.variable} ${outfit.variable} ${inter.variable} antialiased max-w-[2520px] mx-auto`}
       >
         {children}
+        <Toaster />
       </body>
     </html>
   );
