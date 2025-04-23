@@ -89,7 +89,7 @@ export default function SidebarNavigation() {
 
         {/* Settings Navigation */}
         <div className="mt-auto">
-          <h3 className=" font-semibold text-gray-700 mb-4 tracking-wider">
+          <h3 className="font-semibold text-gray-700 mb-4 tracking-wider">
             SETTINGS
           </h3>
           <nav className="space-y-2">

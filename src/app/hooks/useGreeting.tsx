@@ -15,7 +15,7 @@ function useGreeting(timeZone = null) {
         setGreeting('Good Morning');
       } else if (hours >= 12 && hours < 18) {
         setGreeting('Good Afternoon');
-      } else if (hours >= 18 && hours < 21) {
+      } else if (hours >= 18 && hours < 20) {
         setGreeting('Good Evening');
       } else {
         setGreeting('Good Night');
