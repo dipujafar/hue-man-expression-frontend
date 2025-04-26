@@ -135,11 +135,13 @@ export const cardData = [
       ],
     },
     print: "6",
+    href: "cchildren",
   },
   {
     _id: 2,
     image: "/cardImage2.png",
     title: "Diversity Cards",
+    href: "diversity",
     print: "4",
     hoverTitle:
       "Represent various ethnicities for inclusivity in therapy and education.",
@@ -156,6 +158,7 @@ export const cardData = [
     image: "/cardImage3.png",
     title: "Communication Cards (Adults)",
     print: "8",
+    href: "cadult",
     hoverTitle: "Support independence and dignity in communication for adults.",
     total_card: "31",
     description: {
@@ -169,6 +172,7 @@ export const cardData = [
     _id: 4,
     image: "/cardImage4.png",
     title: "Action Cards",
+    href: "action",
     print: "3",
     hoverTitle:
       "Grow language and communication skills through action-based visuals.",
@@ -186,6 +190,7 @@ export const cardData = [
     image: "/cardImage5.png",
     title: "Emotion & Community Helper Cards",
     print: "5",
+    href: "emotion",
     hoverTitle:
       "Promote social learning by identifying emotions and roles within a community.",
     total_card: "20 (12 Emotion Cards, 8 Community Helper Cards)",
@@ -202,6 +207,7 @@ export const cardData = [
     image: "/cardImage6.png",
     title: "Behavior Cards",
     print: "7",
+    href: "behavior",
     hoverTitle: "Model positive behaviors and promote self-regulation.",
     total_card: "14",
     description: {
@@ -216,6 +222,7 @@ export const cardData = [
     image: "/cardImage7.png",
     title: "Preposition Cards",
     print: "4",
+    href: "prepositions",
     hoverTitle:
       "Teach children to communicate details about location, time, and position.",
     total_card: "6",
@@ -229,6 +236,7 @@ export const cardData = [
     image: "/cardImage8.png",
     title: "Potty Training Guide",
     print: "3",
+    href: "potty_training",
     hoverTitle: "Simplify potty training with step-by-step visuals.",
     total_card: "4",
     description: {
@@ -246,6 +254,7 @@ export const cardData = [
       "Build organizational and processing skills through sequential visuals.",
     total_card: "4",
     print: "2",
+    href: "sequence",
     description: {
       title: "Illustrated Sequences",
       description: [
@@ -261,6 +270,7 @@ export const cardData = [
       "Help children learn and practice safety precautions in everyday scenarios.",
     total_card: "4",
     print: "8",
+    href: "safety",
     description: {
       title: "Illustrated Safety Tips",
       description: [
@@ -275,6 +285,7 @@ export const cardData = [
     print: "10",
     hoverTitle: "Support sensory processing through fun, engaging activities.",
     total_card: "4",
+    href: "sensory",
     description: {
       title: "Illustrated Activities",
       description: [
@@ -287,6 +298,7 @@ export const cardData = [
     image: "/cardImage11.png",
     title: "Social Story Cards",
     print: "5",
+    href: "social_story",
     hoverTitle:
       "Prepare for real-life situations with detailed, relatable scenarios.",
     total_card: "39",

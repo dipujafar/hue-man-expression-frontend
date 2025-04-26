@@ -1,15 +1,13 @@
 "use client";
-import Container from "@/components/shared/Container";
-import { PDFViewer } from "@react-pdf/renderer";
-import PdfTemplate from "@/components/shared/PdfTemplate/PdfTemplate";
+import PdfPreviewContainer from "./_components/PdfPreviewContainer";
 
-const PdfPreviewPage = () => {
+
+const PdfPreviewPage = async ({params}: any) => {
+    const cardName = (await params)?.cardName
   return (
-    <div className="h-screen">
-      <PDFViewer width="100%" height="100%">
-        <PdfTemplate />
-      </PDFViewer>
-    </div>
+    <>
+        <PdfPreviewContainer cardName={cardName}></PdfPreviewContainer>
+    </>
   );
 };
 

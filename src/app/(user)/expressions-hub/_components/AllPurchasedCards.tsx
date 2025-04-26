@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { cardData } from "@/utils";
 import { Printer } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const AllPurchasedCards = () => {
   return (
@@ -9,6 +10,7 @@ const AllPurchasedCards = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:gap-10 gap-3">
         {cardData?.map((data) => (
           <div key={data?._id}>
+            <Link href={`/${data?.href}/pdf-preview`}>
             <Card
               style={{
                 boxShadow: "0px 0.411px 10.278px 0px rgba(0, 0, 0, 0.15)",
@@ -31,6 +33,7 @@ const AllPurchasedCards = () => {
                 </h5>
               </CardContent>
             </Card>
+            </Link>
           </div>
         ))}
       </div>
