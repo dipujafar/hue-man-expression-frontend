@@ -46,6 +46,7 @@ const pdfData = [
       { _id: 15, image: "/cadult_image15.png" },
       { _id: 16, image: "/cadult_image16.png" },
       { _id: 17, image: "/cadult_image17.png" },
+      { _id: 18, image: "/" },
     ],
   },
   {
@@ -252,30 +253,7 @@ const pdfData = [
         _id: 2,
         image: "/potty_training_image2.png",
       },
-      {
-        _id: 3,
-        image: "/potty_training_image3.png",
-      },
-      {
-        _id: 4,
-        image: "/potty_training_image4.png",
-      },
-      {
-        _id: 5,
-        image: "/potty_training_image5.png",
-      },
-      {
-        _id: 6,
-        image: "/potty_training_image6.png",
-      },
-      {
-        _id: 7,
-        image: "/",
-      },
-      {
-        _id: 7,
-        image: "/",
-      },
+      
     ],
   },
   {

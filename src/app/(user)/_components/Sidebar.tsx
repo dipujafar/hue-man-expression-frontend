@@ -84,6 +84,17 @@ export default function SidebarNavigation() {
               <ImageIcon size={18} />
               <span>Expressions Gallery</span>
             </Link>
+            <Link
+              href="/toolkit-dashboard"
+              className={cn(
+                "flex items-center gap-2 px-4 py-2 rounded-lg text-gray-900 hover:bg-white/50 transition-colors",
+                pathName === "/toolkit-dashboard" &&
+                  "bg-white text-purple-600 font-medium"
+              )}
+            >
+              <ImageIcon size={18} />
+              <span>Representation Toolkit</span>
+            </Link>
           </nav>
         </div>
 
