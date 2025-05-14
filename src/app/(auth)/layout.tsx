@@ -2,7 +2,7 @@ import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/navbar/Navbar";
 import React, { ReactNode } from "react";
 
-const PublicLayout = ({ children }: { children: ReactNode }) => {
+const AuthLayout = ({ children }: { children: ReactNode }) => {
   return (
     <div>
       <Navbar></Navbar>
@@ -14,4 +14,4 @@ const PublicLayout = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export default PublicLayout;
+export default AuthLayout;

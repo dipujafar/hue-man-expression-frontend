@@ -17,7 +17,7 @@ import Image from "next/image";
 const AllCards = () => {
   return (
     <Container>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 lg:gap-14 gap-9">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-9">
         {cardData?.map((data) => (
           <div key={data?._id}>
             <HoverCard>

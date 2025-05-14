@@ -16,6 +16,9 @@ import { Button } from "@/components/ui/button";
 import bgShadowImage from "@/assets/contact/bgShadow.png";
 import { MoveRight } from "lucide-react";
 import Image from "next/image";
+import { useSendSupportMessageMutation } from "@/redux/api/supportApi";
+import { Error_Modal } from "@/modals/modals";
+import { toast } from "sonner";
 
 const formSchema = z.object({
   name: z
@@ -36,6 +39,7 @@ const formSchema = z.object({
 });
 
 const ContactForm = () => {
+  const [contact, { isLoading }] = useSendSupportMessageMutation();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -46,7 +50,20 @@ const ContactForm = () => {
     },
   });
 
-  const onSubmit = (data: z.infer<typeof formSchema>) => {
+  const onSubmit = async (data: z.infer<typeof formSchema>) => {
+    try {
+      const formattedData = {
+        ...data,
+        full_name: data.name,
+      };
+      const res = await contact(formattedData).unwrap();
+      if (res?.success) {
+        toast.success("Message Sent Successfully");
+        form.reset();
+      }
+    } catch (error: any) {
+      Error_Modal({ title: error?.data?.message });
+    }
     console.log(data);
   };
   return (

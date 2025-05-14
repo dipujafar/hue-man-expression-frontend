@@ -1,9 +1,9 @@
-import React from "react";
-import LoginForm from "./components/LoginForm";
 import waterMarkImage6 from "@/assets/our-purpose/waterMarkImage6.png";
 import Image from "next/image";
+import VerifyOtpForm from "./_components/VerifyOtpForm";
 
-const LoginPage = () => {
+
+const VerifyOtpPage = () => {
   return (
     <div className="relative !z-[99]">
       <div className="absolute bottom-0 right-0">
@@ -15,10 +15,10 @@ const LoginPage = () => {
 
       {/* main contents */}
       <div className="flex justify-center">
-        <LoginForm></LoginForm>
+        <VerifyOtpForm></VerifyOtpForm>
       </div>
     </div>
   );
 };
 
-export default LoginPage;
+export default VerifyOtpPage;
