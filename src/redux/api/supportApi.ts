@@ -1,14 +1,15 @@
+import { tagTypes } from "../tagTypes";
 import { baseApi } from "./baseApi";
 
 const supportApi = baseApi.injectEndpoints({
     endpoints: (build) => ({
         sendSupportMessage: build.mutation({
             query: (data) => ({
-                url: "/support",
+                url: "/support-messages",
                 method: "POST",
                 body: data,
             }),
-            invalidatesTags: ["support"],
+            invalidatesTags: [tagTypes.support],
         }),
     }),
 });

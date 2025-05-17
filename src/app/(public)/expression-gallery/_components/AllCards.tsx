@@ -17,7 +17,7 @@ import Image from "next/image";
 const AllCards = () => {
   return (
     <Container>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-9">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-5">
         {cardData?.map((data) => (
           <div key={data?._id}>
             <HoverCard>
@@ -31,7 +31,7 @@ const AllCards = () => {
                       height={1200}
                       className="max-h-[530px]"
                     ></Image>
-                    <h5 className="text-center mt-3 text-lg text-[#684B3C] truncate font-lucida">
+                    <h5 className="text-center mt-3 text-[#684B3C] truncate font-lucida">
                       {data?.title}
                     </h5>
                   </CardContent>
@@ -39,7 +39,7 @@ const AllCards = () => {
               </HoverCardTrigger>
               <HoverCardContent className=" lg:w-full w-[250px] max-w-lg">
                 <div className="space-y-2">
-                  <h1 className="md:text-xl font-medium md:text-center text-[#684B3C]">
+                  <h1 className="xl:text-xl font-medium md:text-center text-[#684B3C]">
                     {data?.hoverTitle}
                   </h1>
                   <div>
@@ -61,10 +61,10 @@ const AllCards = () => {
                   </div>
 
                   <div className="space-y-1">
-                    <h5 className="text-lg font-medium">
+                    <h5 className="xl:text-lg font-medium">
                       {data?.description?.title} :
                     </h5>
-                    <p>
+                    <p className="xl:text-base text-sm">
                       {data?.description?.description?.map((des) => (
                         <p>{des}</p>
                       ))}
@@ -79,7 +79,7 @@ const AllCards = () => {
 
       <HoverCard>
         <HoverCardTrigger asChild>
-          <Card className="max-w-[440px] mx-auto  lg:mt-14 mt-9">
+          <Card className="max-w-[400px] mx-auto mt-5 ">
             <CardContent className="pt-6">
               <Image
                 src={"/cardImag13.png"}
@@ -88,7 +88,7 @@ const AllCards = () => {
                 height={1200}
                 className="max-h-[530px]"
               ></Image>
-              <h5 className="text-center mt-3 text-lg text-[#684B3C] truncate font-lucida">
+              <h5 className="text-center mt-3  text-[#684B3C] truncate font-lucida">
                 AAC Core Board Lanyards (Sold Separately)
               </h5>
             </CardContent>
@@ -96,7 +96,7 @@ const AllCards = () => {
         </HoverCardTrigger>
         <HoverCardContent className=" lg:w-full w-[250px] max-w-lg">
           <div className="space-y-2">
-            <h1 className="md:text-xl font-medium md:text-center text-[#684B3C]">
+            <h1 className="xl:text-xl font-medium md:text-center text-[#684B3C]">
               Portable boards featuring essential vocabulary for communication.
             </h1>
             <div>
@@ -118,7 +118,7 @@ const AllCards = () => {
       </HoverCard>
 
       <div className="lg:mt-10 mt-5 space-y-5">
-        <div className="flex gap-x-6 gap-y-2 justify-center flex-wrap text-2xl font-merienda text-[#684B3C]">
+        <div className="flex gap-x-6 gap-y-2 justify-center flex-wrap md:text-2xl text-xl font-merienda text-[#684B3C]">
           <h1>Price: $25 each</h1>
           <h1>Bundle (Boy & Girl): $45</h1>
         </div>

@@ -17,7 +17,7 @@ import Image from "next/image";
 const AllCardsDashboard = () => {
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:gap-8 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:gap-5 gap-4">
         {cardData?.map((data) => (
           <div key={data?._id}>
             <HoverCard>
@@ -31,7 +31,7 @@ const AllCardsDashboard = () => {
                       height={1200}
                       className="max-h-[530px]"
                     ></Image>
-                    <h5 className="text-center mt-3 2xl:text-lg text-sm text-[#684B3C] truncate font-lucida">
+                    <h5 className="text-center mt-3 2xl:text-base text-sm text-[#684B3C] truncate font-lucida">
                       {data?.title}
                     </h5>
                   </CardContent>
@@ -39,7 +39,7 @@ const AllCardsDashboard = () => {
               </HoverCardTrigger>
               <HoverCardContent className=" lg:w-full w-[250px] max-w-lg">
                 <div className="space-y-2">
-                  <h1 className="md:text-xl font-medium md:text-center text-[#684B3C]">
+                  <h1 className="2xl:text-xl  font-medium md:text-center text-[#684B3C]">
                     {data?.hoverTitle}
                   </h1>
                   <div>
@@ -49,7 +49,7 @@ const AllCardsDashboard = () => {
                       </p>
                     )}
                     {data?.title === "Sequence Cards" && (
-                      <p className="font-medium text-center">
+                      <p className="md:text-base text-sm font-medium text-center">
                         Scenarios Included:  {data?.total_card}{" "}
                       </p>
                     )}
@@ -61,10 +61,10 @@ const AllCardsDashboard = () => {
                   </div>
 
                   <div className="space-y-1">
-                    <h5 className="text-lg font-medium">
+                    <h5 className="md:text-lg text-sm font-medium">
                       {data?.description?.title} :
                     </h5>
-                    <p>
+                    <p className="md:text-base text-sm">
                       {data?.description?.description?.map((des) => (
                         <p>{des}</p>
                       ))}

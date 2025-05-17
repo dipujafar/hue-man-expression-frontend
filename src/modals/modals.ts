@@ -8,7 +8,7 @@ export const Success_model = (message: Record<string, string>) => {
     text: message.text || "",
     showConfirmButton: false,
     timer: 2000,
-    background: "#302e61",
+    background: "#684B3C",
     color: "#fff",
   });
 };

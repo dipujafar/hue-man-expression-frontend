@@ -17,8 +17,9 @@ import bgShadowImage from "@/assets/contact/bgShadow.png";
 import { MoveRight } from "lucide-react";
 import Image from "next/image";
 import { useSendSupportMessageMutation } from "@/redux/api/supportApi";
-import { Error_Modal } from "@/modals/modals";
+import { Error_Modal, Success_model } from "@/modals/modals";
 import { toast } from "sonner";
+import AnimatedArrow from "@/animatedArrows/AnimatedArrow";
 
 const formSchema = z.object({
   name: z
@@ -58,7 +59,7 @@ const ContactForm = () => {
       };
       const res = await contact(formattedData).unwrap();
       if (res?.success) {
-        toast.success("Message Sent Successfully");
+       Success_model({ title: "Message Sent Successfully", text: "We will get back to you soon." });
         form.reset();
       }
     } catch (error: any) {
@@ -157,13 +158,10 @@ const ContactForm = () => {
 
             <Button
               type="submit"
-              className="bg-[#684B3C] rounded-none group overflow-hidden"
+              className="bg-[#684B3C] rounded-none group"
             >
-              Send Message{" "}
-              <MoveRight
-                size={30}
-                className="group-hover:translate-x-4 duration-300 font-bold"
-              />
+              Send Message
+              <AnimatedArrow></AnimatedArrow>
             </Button>
           </form>
         </Form>

@@ -1,6 +1,7 @@
 "use client";
 import { PDFViewer } from "@react-pdf/renderer";
 import PdfTemplate from "@/components/shared/PdfTemplate/PdfTemplate";
+import { useEffect, useRef, useState } from "react";
 
 const pdfData = [
   {
@@ -357,18 +358,71 @@ const pdfData = [
 ];
 
 const PdfPreviewContainer = ({ cardName }: { cardName: string }) => {
-  console.log(cardName);
+  const [downloadCount, setDownloadCount] = useState(0);
+  const [printCount, setPrintCount] = useState(0);
+  const toolbarRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!toolbarRef.current) return;
+
+    const toolbarEl = toolbarRef.current;
+
+    // Function to attach click listeners to buttons by accessible name or svg title
+    function attachListeners() {
+      const buttons = toolbarEl.querySelectorAll("button");
+      buttons.forEach((btn) => {
+        // Skip if already has listener
+        if ((btn as any)._listenerAttached) return;
+
+        // Get accessible name from aria-label or title attribute
+        const name = btn.getAttribute("aria-label") || btn.getAttribute("title") || "";
+
+        if (name.toLowerCase().includes("download")) {
+          btn.addEventListener("click", () => setDownloadCount((c) => c + 1));
+          (btn as any)._listenerAttached = true;
+        }
+
+        if (name.toLowerCase().includes("print")) {
+          btn.addEventListener("click", () => setPrintCount((c) => c + 1));
+          (btn as any)._listenerAttached = true;
+        }
+      });
+    }
+
+    // Initial attach after a small delay (toolbar might take time to render)
+    const initTimeout = setTimeout(attachListeners, 500);
+
+    // Observe toolbar for added buttons (in case of re-render or lazy load)
+    const observer = new MutationObserver(() => {
+      attachListeners();
+    });
+
+    observer.observe(toolbarEl, { childList: true, subtree: true });
+
+    return () => {
+      clearTimeout(initTimeout);
+      observer.disconnect();
+    };
+  }, [pdfData, cardName]);
+
+  const currentDoc = pdfData?.find((d) => d.name === cardName);
+
+  if (!currentDoc) return <div>No PDF data found for {cardName}</div>;
 
   return (
-    <div className="h-screen">
-      <PDFViewer width="100%" height="100%">
-        {/* @ts-ignore */}
-        {pdfData?.map(
-          (data) =>
-            data?.name === cardName &&
-            data?.name && <PdfTemplate key={data?.name} data={data?.cardData} />
-        )}
-      </PDFViewer>
+     <div className="h-screen flex flex-col">
+      <div className="p-2 bg-gray-100 flex justify-between" ref={toolbarRef}>
+        <div>
+          Downloads: {downloadCount} | Prints: {printCount}
+        </div>
+      </div>
+
+      <div className="flex-grow">
+        <PDFViewer width="100%" height="100%">
+          {/* @ts-ignore */}
+          <PdfTemplate data={currentDoc.cardData} />
+        </PDFViewer>
+      </div>
     </div>
   );
 };

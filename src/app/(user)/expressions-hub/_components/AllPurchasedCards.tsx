@@ -7,7 +7,7 @@ import Link from "next/link";
 const AllPurchasedCards = () => {
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:gap-10 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:gap-5 gap-3">
         {cardData?.map((data) => (
           <div key={data?._id}>
             <Link href={`/${data?.href}/pdf-preview`}>
@@ -28,7 +28,7 @@ const AllPurchasedCards = () => {
                   height={1200}
                   className="max-h-[530px]"
                 ></Image>
-                <h5 className="text-center mt-3 2xl:text-lg  text-[#684B3C] truncate font-lucida">
+                <h5 className="text-center mt-3   text-[#684B3C] truncate font-lucida">
                   {data?.title}
                 </h5>
               </CardContent>

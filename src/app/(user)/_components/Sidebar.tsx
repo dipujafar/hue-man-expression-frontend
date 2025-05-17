@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { Home, Settings, ImageIcon } from "lucide-react";
+import { Home, Settings, ImageIcon, Clapperboard, EthernetPort } from "lucide-react";
 import logo from "@/assets/image/logo.png";
 import Greeting from "./Greeting";
 import { usePathname } from "next/navigation";
@@ -70,7 +70,7 @@ export default function SidebarNavigation() {
                   "bg-white text-purple-600 font-medium"
               )}
             >
-              <ImageIcon size={18} />
+              <EthernetPort size={18} />
               <span>Hueman Expressions Hub</span>
             </Link>
             <Link
@@ -92,7 +92,7 @@ export default function SidebarNavigation() {
                   "bg-white text-purple-600 font-medium"
               )}
             >
-              <ImageIcon size={18} />
+             <Clapperboard size={18} />
               <span>Representation Toolkit</span>
             </Link>
           </nav>

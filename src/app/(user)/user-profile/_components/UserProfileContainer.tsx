@@ -1,7 +1,10 @@
-import React from 'react';
+'use client'
+import { useGetProfileQuery } from '@/redux/api/profileApi';
 import CurrentPlan from './CurrentPlan';
 
 const UserProfileContainer = () => {
+  const {data, isLoading} = useGetProfileQuery(undefined);
+  console.log(data);
     return (
         <div className="space-y-14">
       <div className="md:space-y-6 space-y-4 ">
