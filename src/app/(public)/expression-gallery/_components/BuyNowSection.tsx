@@ -1,8 +1,11 @@
+"use client";
 import SectionBg from "@/assets/expression-gallery/bgImage.png";
 import Image from "next/image";
 import CommonButton from "@/components/ui/common-button";
+import { useCreatePaymentMutation } from "@/redux/api/paymentApi";
 
 const BuyNowSection = () => {
+  const [createPayment, { isLoading }] = useCreatePaymentMutation();
   return (
     <div className="relative ">
       <Image
@@ -19,7 +22,7 @@ const BuyNowSection = () => {
               learning!
             </p>
 
-            <CommonButton>Buy Now</CommonButton>
+            <CommonButton disable={isLoading}>Buy Now</CommonButton>
             
           </div>
         </div>

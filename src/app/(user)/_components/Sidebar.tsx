@@ -1,14 +1,28 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { Home, Settings, ImageIcon, Clapperboard, EthernetPort } from "lucide-react";
+import {
+  Home,
+  Settings,
+  ImageIcon,
+  Clapperboard,
+  EthernetPort,
+} from "lucide-react";
 import logo from "@/assets/image/logo.png";
 import Greeting from "./Greeting";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { useGetProfileQuery } from "@/redux/api/profileApi";
+import CustomAvatar from "@/components/shared/CustomAvatar";
+import { useAppDispatch } from "@/redux/hooks";
+import { logout } from "@/redux/features/authSlice";
 
 export default function SidebarNavigation() {
   const pathName = usePathname();
+  const { data: userData, isLoading: isUserDataLoading } =
+    useGetProfileQuery(undefined);
+  const dispatch = useAppDispatch();
+  const router = useRouter();
 
   return (
     <div>
@@ -31,17 +45,16 @@ export default function SidebarNavigation() {
         {/* Profile */}
         <div className="flex flex-col items-center mb-8">
           <div className="size-32 rounded-full overflow-hidden mb-2 border-8 border-[#A99E90]  flex-center">
-            <Image
-              src="/user-profile.png"
-              alt="User Avatar"
-              width={1200}
-              height={1200}
-              className="size-24 rounded-full object-cover"
-            />
+            <CustomAvatar
+              img={userData?.data?.image}
+              name={userData?.data?.name}
+              className="size-24"
+              fallbackClass="text-4xl"
+            ></CustomAvatar>
           </div>
           <div className="text-center">
             <Greeting></Greeting>
-            <p className=" font-medium">Istiak Ahmed</p>
+            <p className=" font-medium">{userData?.data?.name}</p>
           </div>
         </div>
 
@@ -92,7 +105,7 @@ export default function SidebarNavigation() {
                   "bg-white text-purple-600 font-medium"
               )}
             >
-             <Clapperboard size={18} />
+              <Clapperboard size={18} />
               <span>Representation Toolkit</span>
             </Link>
           </nav>
@@ -115,13 +128,16 @@ export default function SidebarNavigation() {
               <Settings size={18} />
               <span>Settings</span>
             </Link>
-            <Link
-              href="/"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg text-red-500 hover:bg-white/50 transition-colors"
+            <div
+              onClick={() => {
+                dispatch(logout());
+                router.refresh();
+              }}
+              className="flex items-center gap-2 px-4 py-2 rounded-lg text-red-500 hover:bg-white/50 transition-colors cursor-pointer"
             >
               <LogoutIcon></LogoutIcon>
               <span>Logout</span>
-            </Link>
+            </div>
           </nav>
         </div>
       </div>

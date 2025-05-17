@@ -1,12 +1,14 @@
-'use client'
-import { useGetProfileQuery } from '@/redux/api/profileApi';
-import CurrentPlan from './CurrentPlan';
+"use client";
+import { useGetProfileQuery } from "@/redux/api/profileApi";
+import CurrentPlan from "./CurrentPlan";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const UserProfileContainer = () => {
-  const {data, isLoading} = useGetProfileQuery(undefined);
-  console.log(data);
-    return (
-        <div className="space-y-14">
+  const { data: UserData, isLoading: isUserDataLoading } =
+    useGetProfileQuery(undefined);
+  console.log(UserData?.data?.name);
+  return (
+    <div className="space-y-14">
       <div className="md:space-y-6 space-y-4 ">
         <h1 className="xl:text-5xl md:text-3xl text-2xl font-merienda font-semibold text-[#FFA21B]">
           My Profile
@@ -15,15 +17,19 @@ const UserProfileContainer = () => {
         <div className="grid md:grid-cols-2 grid-cols-1 md:gap-6 gap-3">
           <div>
             <h3 className="font-medium">Full Name</h3>
-            <p className="text-[#7E7E7E]">Istiak Ahmed</p>
+            {isUserDataLoading ? (
+              <Skeleton className="h-5 w-3/4" />
+            ) : (
+              <p className="text-[#7E7E7E]">{UserData?.data?.name}</p>
+            )}
           </div>
           <div>
             <h3 className="font-medium">Email</h3>
-            <p className="text-[#7E7E7E]">istiakahmed@gmail.com</p>
-          </div>
-          <div>
-            <h3 className="font-medium">ID</h3>
-            <p className="text-[#7E7E7E]">WEBB-5265</p>
+            {isUserDataLoading ? (
+              <Skeleton className="h-5 w-3/4" />
+            ) : (
+              <p className="text-[#7E7E7E]">{UserData?.data?.email}</p>
+            )}
           </div>
         </div>
       </div>
@@ -37,7 +43,7 @@ const UserProfileContainer = () => {
         </div>
       </div>
     </div>
-    );  
+  );
 };
 
 export default UserProfileContainer;
