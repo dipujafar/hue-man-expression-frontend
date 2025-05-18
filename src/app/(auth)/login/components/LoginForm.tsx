@@ -15,7 +15,7 @@ import { Button } from "@/components/ui/button";
 import bgShadowImage from "@/assets/contact/bgShadow.png";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { toast } from "sonner";
 import { useLoginMutation } from "@/redux/api/authApi";
 import { Error_Modal } from "@/modals/modals";
@@ -47,6 +47,7 @@ const LoginForm = () => {
       password: "",
     },
   });
+  const redirectTo = useSearchParams().get("redirect");
 
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     try {
@@ -60,6 +61,10 @@ const LoginForm = () => {
             token: res?.data?.accessToken,
           })
         );
+
+        if (res?.data?.accessToken && redirectTo) {
+          router.back();
+        }
         if (res?.data?.accessToken) {
           router.push("/user-profile");
         }

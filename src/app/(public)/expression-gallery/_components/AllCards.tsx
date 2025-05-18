@@ -1,18 +1,14 @@
+"use client";
 import Container from "@/components/shared/Container";
 import { Card, CardContent } from "@/components/ui/card";
-import CommonButton from "@/components/ui/common-button";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
 import { cardData } from "@/utils";
 import Image from "next/image";
+import PurchaseAACCoreBoard from "./PurchaseAACCoreBoard";;
 
 const AllCards = () => {
   return (
@@ -66,7 +62,7 @@ const AllCards = () => {
                     </h5>
                     <p className="xl:text-base text-sm">
                       {data?.description?.description?.map((des) => (
-                        <p>{des}</p>
+                        <p key={des}>{des}</p>
                       ))}
                     </p>
                   </div>
@@ -118,13 +114,9 @@ const AllCards = () => {
       </HoverCard>
 
       <div className="lg:mt-10 mt-5 space-y-5">
-        <div className="flex gap-x-6 gap-y-2 justify-center flex-wrap md:text-2xl text-xl font-merienda text-[#684B3C]">
-          <h1>Price: $25 each</h1>
-          <h1>Bundle (Boy & Girl): $45</h1>
-        </div>
-        <div className=" flex justify-center">
-          <CommonButton>Buy Now</CommonButton>
-        </div>
+       
+
+        <PurchaseAACCoreBoard />
       </div>
     </Container>
   );

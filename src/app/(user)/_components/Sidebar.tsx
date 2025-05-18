@@ -17,6 +17,7 @@ import CustomAvatar from "@/components/shared/CustomAvatar";
 import { useAppDispatch } from "@/redux/hooks";
 import { logout } from "@/redux/features/authSlice";
 
+
 export default function SidebarNavigation() {
   const pathName = usePathname();
   const { data: userData, isLoading: isUserDataLoading } =

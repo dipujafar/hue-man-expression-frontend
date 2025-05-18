@@ -11,12 +11,16 @@ export default function middleware(req: any) {
   }
 
   if (!isLoggedIn && !isAuthRoute) {
-    return NextResponse.redirect(new URL("/", req.url));
+    return NextResponse.redirect(new URL("/login", req.url));
   }
 }
 
 export const config = {
   matcher: [
     "/user-profile",
+    "/expressions-hub",
+    "/expression-gallery-dashboard",
+    "/toolkit-dashboard",
+    "/settings"
   ],
 };

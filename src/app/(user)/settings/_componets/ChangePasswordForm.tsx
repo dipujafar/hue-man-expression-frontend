@@ -89,10 +89,10 @@ export default function ChangePasswordForm() {
             )}
           />
         </div>
-        <div className="lg:w-[70%] mx-auto">
+        <div className="lg:w-[70%] xl:w-[60%] mx-auto">
           <Button
             type="submit"
-            className="w-full h-12 bg-[#8B7B65] hover:bg-[#7A6C58] text-white rounded-full"
+            className="w-full h-10 bg-[#8B7B65] hover:bg-[#7A6C58] text-white rounded-full"
           >
             Save
           </Button>

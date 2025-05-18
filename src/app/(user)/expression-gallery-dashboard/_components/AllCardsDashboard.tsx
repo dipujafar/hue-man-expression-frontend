@@ -1,3 +1,4 @@
+import PurchaseAACCoreBoard from "@/app/(public)/expression-gallery/_components/PurchaseAACCoreBoard";
 import Container from "@/components/shared/Container";
 import { Card, CardContent } from "@/components/ui/card";
 import CommonButton from "@/components/ui/common-button";
@@ -66,7 +67,7 @@ const AllCardsDashboard = () => {
                     </h5>
                     <p className="md:text-base text-sm">
                       {data?.description?.description?.map((des) => (
-                        <p>{des}</p>
+                        <p key={des}>{des}</p>
                       ))}
                     </p>
                   </div>
@@ -79,7 +80,7 @@ const AllCardsDashboard = () => {
 
       <HoverCard>
         <HoverCardTrigger asChild>
-          <Card className="max-w-[440px] mx-auto  lg:mt-14 mt-9">
+          <Card className="max-w-[340px] mx-auto mt-6">
             <CardContent className="pt-6">
               <Image
                 src={"/cardImag13.png"}
@@ -88,7 +89,7 @@ const AllCardsDashboard = () => {
                 height={1200}
                 className="max-h-[530px]"
               ></Image>
-              <h5 className="text-center mt-3 text-lg text-[#684B3C] truncate font-lucida">
+              <h5 className="text-center mt-3 text-sm text-[#684B3C] truncate font-lucida">
                 AAC Core Board Lanyards (Sold Separately)
               </h5>
             </CardContent>
@@ -118,13 +119,7 @@ const AllCardsDashboard = () => {
       </HoverCard>
 
       <div className="lg:mt-10 mt-5 space-y-5">
-        <div className="flex gap-x-6 gap-y-2 justify-center flex-wrap text-2xl font-merienda text-[#684B3C]">
-          <h1>Price: $25 each</h1>
-          <h1>Bundle (Boy & Girl): $45</h1>
-        </div>
-        <div className=" flex justify-center">
-          <CommonButton>Buy Now</CommonButton>
-        </div>
+        <PurchaseAACCoreBoard />
       </div>
     </div>
   );

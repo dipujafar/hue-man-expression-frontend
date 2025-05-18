@@ -1,5 +1,6 @@
 import CurrentPlan from "../../user-profile/_components/CurrentPlan";
 import ChangePasswordForm from "./ChangePasswordForm";
+import UserProfileForm from "./UserProfileForm";
 
 const SettingsPageContainer = () => {
   return (
@@ -10,20 +11,7 @@ const SettingsPageContainer = () => {
           My Profile
         </h1>
         <hr className="border-dotted border border-[#837959]" />
-        <div className="grid md:grid-cols-2 grid-cols-1 md:gap-6 gap-3">
-          <div>
-            <h3 className="font-medium">Full Name</h3>
-            <p className="text-[#7E7E7E]">Istiak Ahmed</p>
-          </div>
-          <div>
-            <h3 className="font-medium">Email</h3>
-            <p className="text-[#7E7E7E]">istiakahmed@gmail.com</p>
-          </div>
-          <div>
-            <h3 className="font-medium">ID</h3>
-            <p className="text-[#7E7E7E]">WEBB-5265</p>
-          </div>
-        </div>
+        <UserProfileForm/>
       </div>
       {/*  ================== change password ============================ */}
       <div className="md:space-y-6 space-y-4 ">
