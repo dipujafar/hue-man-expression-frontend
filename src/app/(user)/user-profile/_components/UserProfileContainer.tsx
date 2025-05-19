@@ -6,7 +6,6 @@ import { Skeleton } from "@/components/ui/skeleton";
 const UserProfileContainer = () => {
   const { data: UserData, isLoading: isUserDataLoading } =
     useGetProfileQuery(undefined);
-  console.log(UserData?.data?.name);
   return (
     <div className="space-y-14">
       <div className="md:space-y-6 space-y-4 ">
