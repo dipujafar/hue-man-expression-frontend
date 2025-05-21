@@ -10,6 +10,7 @@ import { useAppSelector } from "@/redux/hooks";
 import Cookies from "js-cookie";
 import CustomAvatar from "../CustomAvatar";
 import { useGetProfileQuery } from "@/redux/api/profileApi";
+import { previewImage } from "@/utils/previewImage";
 
 const Navbar = () => {
   const user = useAppSelector((state) => state.auth.user);
@@ -45,7 +46,7 @@ const Navbar = () => {
             </Link>
           ) : (
             <Link href="/user-profile">
-             <CustomAvatar img={userData?.data?.image} name={userData?.data?.name} className="size-12" fallbackClass="text-xl"></CustomAvatar>
+             <CustomAvatar img={previewImage(userData?.data?.image)} name={userData?.data?.name} className="size-12" fallbackClass="text-xl"></CustomAvatar>
             </Link>
           )}
         </div>

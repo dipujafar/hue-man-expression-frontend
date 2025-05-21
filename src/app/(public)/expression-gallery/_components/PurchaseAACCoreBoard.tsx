@@ -76,7 +76,7 @@ const PurchaseAACCoreBoard = () => {
                       <FormControl>
                         <RadioGroupItem value="single" />
                       </FormControl>
-                      <FormLabel className="font-normal md:text-2xl text-xl">
+                      <FormLabel id="single" className="font-normal md:text-2xl text-xl" >
                         Price: $25 eac
                       </FormLabel>
                     </FormItem>
@@ -84,7 +84,7 @@ const PurchaseAACCoreBoard = () => {
                       <FormControl>
                         <RadioGroupItem value="bundle" />
                       </FormControl>
-                      <FormLabel className="font-normal md:text-2xl text-xl">
+                      <FormLabel id="bundle" className="font-normal md:text-2xl text-xl">
                         Bundle (Boy & Girl): $45
                       </FormLabel>
                     </FormItem>

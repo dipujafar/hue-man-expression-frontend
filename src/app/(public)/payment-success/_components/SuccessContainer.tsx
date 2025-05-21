@@ -49,12 +49,12 @@ const SuccessContainer = () => {
         <h1 className="text-5xl font-medium text-green-800">Successfully </h1>
         <div className="mt-1 space-x-2">
           <Link href={"/"} replace>
-            <Button variant={"outline"} className=" text-primary-orange">
+            <Button variant={"outline"} className=" text-primary-orange w-[120px]">
               Home
             </Button>
           </Link>
-          <Link href={"/login"} replace>
-            <Button className="bg-[#684B3C]">Login</Button>
+          <Link href={"/user-profile"} replace>
+            <Button className="bg-[#684B3C] w-[120px]">Dashboard</Button>
           </Link>
         </div>
       </Container>

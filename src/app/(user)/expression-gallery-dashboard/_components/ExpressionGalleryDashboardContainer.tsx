@@ -16,66 +16,7 @@ const ExpressionGalleryDashboardContainer = () => {
   return (
     <div className="relative ">
       {/* Watermark Images Container */}
-      <div className="absolute inset-0 z-0 ">
-        <div className="absolute top-0 left-0">
-          <Image src={waterMarkImage1} alt="Watermark" className="opacity-80" />
-        </div>
-        <div className="absolute top-1/3 left-0">
-          <Image src={waterMarkImage2} alt="Watermark" className="opacity-80" />
-        </div>
-
-        <div className="absolute top-36 right-0">
-          <Image src={waterMarkImage5} alt="Watermark" className="opacity-80" />
-        </div>
-        <div className="absolute -bottom-10 right-0">
-          <Image src={waterMarkImage6} alt="Watermark" className="opacity-80" />
-        </div>
-        <div className="absolute -bottom-10 left-0">
-          <Image src={waterMarkImage7} alt="Watermark" className="opacity-80" />
-        </div>
-      </div>
-      <div className="absolute top-[75%] ">
-        <Image
-          src={waterMarkImage4}
-          alt="Watermark"
-          className="opacity-40 xl:opacity-100"
-        />
-      </div>
-      <div className="absolute top-[30%] right-0">
-        <Image
-          src={waterMarkImage4}
-          alt="Watermark"
-          className="opacity-40 xl:opacity-100"
-        />
-      </div>
-      <div className="absolute top-[60%] right-0">
-        <Image
-          src={waterMarkImage4}
-          alt="Watermark"
-          className="opacity-40 xl:opacity-100"
-        />
-      </div>
-      <div className="absolute top-[90%] right-0">
-        <Image
-          src={waterMarkImage4}
-          alt="Watermark"
-          className="opacity-40 xl:opacity-100"
-        />
-      </div>
-      <div className="absolute top-[15%] ">
-        <Image
-          src={waterMarkImage4}
-          alt="Watermark"
-          className="opacity-40 xl:opacity-100"
-        />
-      </div>
-      <div className="absolute top-[45%] ">
-        <Image
-          src={waterMarkImage4}
-          alt="Watermark"
-          className="opacity-40 xl:opacity-100"
-        />
-      </div>
+     
 
       {/* Content  */}
       <div className="relative">

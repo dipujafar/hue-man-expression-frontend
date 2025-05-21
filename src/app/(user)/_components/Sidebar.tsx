@@ -16,6 +16,7 @@ import { useGetProfileQuery } from "@/redux/api/profileApi";
 import CustomAvatar from "@/components/shared/CustomAvatar";
 import { useAppDispatch } from "@/redux/hooks";
 import { logout } from "@/redux/features/authSlice";
+import { previewImage } from "@/utils/previewImage";
 
 
 export default function SidebarNavigation() {
@@ -47,7 +48,7 @@ export default function SidebarNavigation() {
         <div className="flex flex-col items-center mb-8">
           <div className="size-32 rounded-full overflow-hidden mb-2 border-8 border-[#A99E90]  flex-center">
             <CustomAvatar
-              img={userData?.data?.image}
+              img={previewImage(userData?.data?.image)}
               name={userData?.data?.name}
               className="size-24"
               fallbackClass="text-4xl"
