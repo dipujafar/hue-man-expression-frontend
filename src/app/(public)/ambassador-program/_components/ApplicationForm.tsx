@@ -19,6 +19,10 @@ import bgShadowImage from "@/assets/ambassador-program/sectionBgImage.png";
 import Image from "next/image";
 import SuccessModal from "./SuccessModal";
 import { useState } from "react";
+import { useSendApplicationMutation } from "@/redux/api/applicationApi";
+import { Error_Modal } from "@/modals/modals";
+import LoadingSpin from "@/components/ui/loading-spin";
+import AnimatedArrow from "@/animatedArrows/AnimatedArrow";
 
 const formSchema = z.object({
   name: z
@@ -29,12 +33,15 @@ const formSchema = z.object({
   about: z
     .string()
     .min(5, { message: "Message must be at least 5 characters" }),
-  promotions: z.array(z.string()).optional(),
-  payoutMethod: z.string().optional(),
+  promotions: z
+    .array(z.string())
+    .min(1, { message: "Promotions are required at least one" }),
+  payoutMethod: z.string().min(1, { message: "Payout method is required" }),
   productUsage: z.string().optional(),
 });
 
 const ApplicationForm = () => {
+  const [sendApplication, { isLoading }] = useSendApplicationMutation();
   const [openSuccessModal, setOpenSuccessModal] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -48,9 +55,32 @@ const ApplicationForm = () => {
     },
   });
 
-  const onSubmit = (data: z.infer<typeof formSchema>) => {
-    console.log(data);
-    setOpenSuccessModal(true);
+  const onSubmit = async (data: z.infer<typeof formSchema>) => {
+    const formattedData = {
+      full_name: data?.name,
+      email_address: data?.email,
+      about_yourself: data?.about,
+      promotion_methods: {
+        social_media: data?.promotions?.includes("social_media"),
+        blogs_or_newsletters: data?.promotions?.includes("blogs"),
+        professional_events: data?.promotions?.includes("events"),
+        other: data?.promotions?.includes("other") ? "Other" : "",
+      },
+      payout_method: data?.payoutMethod,
+      currently_using_hue_man: data?.productUsage === "yes" ? true : false,
+    };
+
+    try {
+      const res = await sendApplication(formattedData).unwrap();
+      if (res?.success) {
+        setOpenSuccessModal(true);
+      }
+    } catch (error: any) {
+      Error_Modal({ title: error?.data?.message });
+    }
+
+    // console.log(formattedData);
+    // setOpenSuccessModal(true);
   };
 
   const promotionOptions = [
@@ -61,8 +91,8 @@ const ApplicationForm = () => {
   ];
 
   const paymentsOptions = [
-    { label: "PayPal", value: "paypal" },
-    { label: "Bank Transfer", value: "bank_transfer" },
+    { label: "PayPal", value: "PayPal" },
+    { label: "Bank Transfer", value: "Bank Transfer" },
   ];
 
   const productUsageOptions = [
@@ -258,10 +288,12 @@ const ApplicationForm = () => {
 
             {/* Submit Button */}
             <Button
+              disabled={isLoading}
               type="submit"
-              className="bg-primary-white rounded-full text-black hover:text-primary-white w-full hover:bg-gray-700 duration-500"
+              className="bg-primary-white rounded-full text-black hover:text-primary-white w-full hover:bg-gray-700 duration-500 group"
             >
-              Send Request
+              Send Request <AnimatedArrow/>
+              {isLoading && <LoadingSpin/>}
             </Button>
           </form>
         </Form>

@@ -2,6 +2,7 @@ import React from "react";
 import { Mr_Dafoe } from "next/font/google";
 import Container from "./Container";
 import { cn } from "@/lib/utils";
+
 const mr_dafoe = Mr_Dafoe({
   subsets: ["latin"],
   variable: "--font-mr-dafoe",

@@ -35,8 +35,6 @@ export default function UserProfileForm() {
     useGetProfileQuery(undefined);
   const [updateProfile, { isLoading }] = useUpdateProfileMutation();
 
-  console.log(userData);
-
   const form = useForm<FormData>({
     defaultValues: {
       name: userData?.data?.name,
@@ -77,6 +75,7 @@ export default function UserProfileForm() {
       updateProfile(formData).unwrap();
       toast.success("Profile Updated Successfully");
       setImagePreview(null);
+      form.reset();
     } catch (error: any) {
       Error_Modal({ title: error?.data?.message });
     }

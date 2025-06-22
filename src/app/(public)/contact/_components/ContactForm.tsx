@@ -20,6 +20,7 @@ import { useSendSupportMessageMutation } from "@/redux/api/supportApi";
 import { Error_Modal, Success_model } from "@/modals/modals";
 import { toast } from "sonner";
 import AnimatedArrow from "@/animatedArrows/AnimatedArrow";
+import LoadingSpin from "@/components/ui/loading-spin";
 
 const formSchema = z.object({
   name: z
@@ -55,7 +56,7 @@ const ContactForm = () => {
     try {
       const formattedData = {
         ...data,
-        full_name: data.name,
+        full_name: data?.name,
       };
       const res = await contact(formattedData).unwrap();
       if (res?.success) {
@@ -157,11 +158,13 @@ const ContactForm = () => {
             />
 
             <Button
+              disabled={isLoading}
               type="submit"
               className="bg-[#684B3C] rounded-none group"
             >
               Send Message
               <AnimatedArrow></AnimatedArrow>
+              {isLoading && <LoadingSpin/>}
             </Button>
           </form>
         </Form>

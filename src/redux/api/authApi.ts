@@ -59,6 +59,14 @@ const authApi = baseApi.injectEndpoints({
       }),
       providesTags: [tagTypes.user],
     }),
+    changePassword: build.mutation({
+      query: (data) => ({
+        url: "/auth/create-new-password",
+        method: "POST",
+        body: data,
+      }),
+      invalidatesTags: [tagTypes.user, tagTypes.auth],
+    })
   }),
 });
 
@@ -70,4 +78,5 @@ export const {
   useReSetPasswordMutation,
   useResendOtpMutation,
   useGetAllUserQuery,
+  useChangePasswordMutation
 } = authApi;
