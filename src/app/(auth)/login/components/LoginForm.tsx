@@ -17,7 +17,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { toast } from "sonner";
-import { useLoginMutation } from "@/redux/api/authApi";
+import {
+  useForgetPasswordMutation,
+  useLoginMutation,
+} from "@/redux/api/authApi";
 import { Error_Modal } from "@/modals/modals";
 import LoadingSpin from "@/components/ui/loading-spin";
 import { useAppDispatch } from "@/redux/hooks";
@@ -38,6 +41,7 @@ const formSchema = z.object({
 const LoginForm = () => {
   const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
+  const [sendOtp] = useForgetPasswordMutation();
   const [login, { isLoading }] = useLoginMutation();
   const dispatch = useAppDispatch();
   const form = useForm<z.infer<typeof formSchema>>({
@@ -70,6 +74,18 @@ const LoginForm = () => {
         }
       }
     } catch (error: any) {
+      // console.log(error?.status === 400);
+      // console.log(error?.data?.message === "Account not verified");
+      if (
+        error?.status === 400 &&
+        error?.data?.message === "Account not verified"
+      ) {
+        const res = await sendOtp(data).unwrap();
+        if (res.data) {
+          router.push(`/verify-otp?email=${data?.email}`);
+        }
+        return;
+      }
       Error_Modal({ title: error?.data?.message });
     }
   };
