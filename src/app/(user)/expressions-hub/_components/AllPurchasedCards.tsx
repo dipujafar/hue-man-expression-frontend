@@ -16,7 +16,7 @@ const AllPurchasedCards = () => {
   const router = useRouter();
   const { data: cardDataWithPrintCount, isLoading: isPrintDataLoading } =
     useGetPrintsQuery(undefined);
-  const [updatePrintCount, { isLoading: updatePrintCountLoading }] =
+  const [updatePrintCount] =
     useUpdatePrintDataMutation();
 
   const [allCardsData, setAllCardsData] = useState(cardData || []);
