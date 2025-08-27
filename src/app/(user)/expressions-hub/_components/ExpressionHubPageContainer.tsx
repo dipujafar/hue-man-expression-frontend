@@ -5,13 +5,19 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useGetPrintsQuery, useUpdatePrintDataMutation } from "@/redux/api/printApi";
 
 const ExpressionHubPageContainer = () => {
   const { data: subscriptionData, isLoading: isSubscriptionLoading } =
     useGetMySubscriptionQuery(undefined);
 
-  console.log(subscriptionData?.data?.package_name);
+  // const { data, isLoading: PrintDataLoading } = useGetPrintsQuery(undefined);
+  // const [updatePrintCount, { isLoading: updatePrintCountLoading }] =
+  //   useUpdatePrintDataMutation();
 
+  // console.log(data);
+
+  // ------------------ if there is initial loading then show this skeleton  ------------------
   if (isSubscriptionLoading) {
     return (
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:gap-5 gap-3">
@@ -31,6 +37,7 @@ const ExpressionHubPageContainer = () => {
     );
   }
 
+  // ------------------ if there is active single or bundle subscription then show this message  ------------------
   if (
     subscriptionData?.data?.package_name === "single" ||
     subscriptionData?.data?.package_name === "bundle"
@@ -54,6 +61,8 @@ const ExpressionHubPageContainer = () => {
     );
   }
 
+  // ------------------ if there is active combo subscription then show all purchased cards  ------------------
+
   if (subscriptionData?.data?.package_name === "combo") {
     return (
       <div>
@@ -61,6 +70,8 @@ const ExpressionHubPageContainer = () => {
       </div>
     );
   }
+
+  //  ------------------ if there is no active subscription then show this message  and  this action button  ------------------
   if (!subscriptionData?.data?.package_name) {
     return (
       <div>
@@ -71,9 +82,7 @@ const ExpressionHubPageContainer = () => {
           <p className="md:text-lg font-medium">
             Please purchase a subscription for all card with details.
           </p>
-          <Link
-            href={`/expression-gallery-dashboard#combo`}
-          >
+          <Link href={`/expression-gallery-dashboard#combo`}>
             <Button className="bg-gradient-to-br from-[#4C3519] to-[#807557]">
               Purchase
             </Button>

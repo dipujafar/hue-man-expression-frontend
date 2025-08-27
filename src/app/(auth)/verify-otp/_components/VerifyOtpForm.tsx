@@ -38,7 +38,6 @@ const VerifyOtpForm = () => {
   const email = useSearchParams().get("email");
   const status = useSearchParams().get("status");
 
-  console.log(email, status);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {

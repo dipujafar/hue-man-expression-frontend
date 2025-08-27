@@ -35,7 +35,7 @@ export default function UserProfileForm() {
     useGetProfileQuery(undefined);
   const [updateProfile, { isLoading }] = useUpdateProfileMutation();
 
-  console.log(userData);
+
 
   const form = useForm<FormData>({
     defaultValues: {

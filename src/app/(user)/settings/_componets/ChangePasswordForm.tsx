@@ -62,7 +62,6 @@ export default function ChangePasswordForm() {
     } catch (error: any) {
       Error_Modal({ title: error?.data?.message });
     }
-    console.log(values);
     // You would typically send this data to your API here
   }
 

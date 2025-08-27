@@ -66,7 +66,6 @@ const ContactForm = () => {
     } catch (error: any) {
       Error_Modal({ title: error?.data?.message });
     }
-    console.log(data);
   };
   return (
     <div className="max-w-lg md:px-10 px-4 py-7 bg-gradient-to-t from-[#80715D] to-[#b3aa98] relative overflow-hidden z-0">

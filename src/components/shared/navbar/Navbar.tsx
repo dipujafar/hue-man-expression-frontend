@@ -17,10 +17,6 @@ const Navbar = () => {
   const isLoggedIn = Cookies.get("hue-man-expressions-access-token");
   const {data:userData, isLoading} = useGetProfileQuery(undefined, {skip: !user || !isLoggedIn});
 
-
-
-
-  console.log(userData);
   return (
     <div className=" bg-primary-white overflow-x-auto  mx-auto">
       <Container className="flex justify-between gap-x-4 items-center  px-4 md:px-6  xl:px-16 2xl:px-28">
