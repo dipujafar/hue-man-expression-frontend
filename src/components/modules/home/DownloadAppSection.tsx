@@ -1,7 +1,7 @@
 import Container from "@/components/shared/Container";
 import AppleStoreImage from "@/assets/common/appleStoreAppImage.png";
 import playStoreImage from "@/assets/common/PlayStoreAppImage.png";
-import mobileAppImage from "@/assets/home/mobileApp.png";
+import mobileAppImage from "@/assets/home/mobileApp2.png";
 import waterMarkImage from "@/assets/home/downloadAppSectionBg.png";
 import Image from "next/image";
 

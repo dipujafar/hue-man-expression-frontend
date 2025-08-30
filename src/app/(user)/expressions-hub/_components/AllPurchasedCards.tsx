@@ -94,10 +94,10 @@ const AllPurchasedCards = () => {
               }
             >
               <CardContent className="pt-6  ">
-                <div className="flex items-center gap-2 justify-end xl:text-xl mb-3 font-merienda text-[#684B3C] cursor-pointer">
+                {/* <div className="flex items-center gap-2 justify-end xl:text-xl mb-3 font-merienda text-[#684B3C] cursor-pointer">
                   <Printer />
                   <h1>{10 - parseInt(data?.print)} Print remaining</h1>
-                </div>
+                </div> */}
                 <Image
                   src={data?.image}
                   alt="card_Image"

@@ -1,5 +1,5 @@
 import Container from "@/components/shared/Container";
-import mobileAppImage from "@/assets/home/mobileApp.png";
+import mobileAppImage from "@/assets/home/mobileApp2.png";
 import waterMarkImage from "@/assets/home/downloadAppSectionBg.png";
 import Image from "next/image";
 
@@ -17,7 +17,7 @@ const AppDisplay = () => {
 
       {/* Content */}
       <Container className="relative flex justify-center z-20">
-        <Image src={mobileAppImage} alt="mobileAppImage" />
+        <Image src={mobileAppImage} alt="mobileAppImage" className="" />
       </Container>
     </div>
   );
