@@ -8,7 +8,7 @@ export const navLinks = [
     href: "/our-purpose",
   },
   {
-    label: "Expression Gallery",
+    label: "Purchase Cards",
     href: "/expression-gallery",
   },
   {

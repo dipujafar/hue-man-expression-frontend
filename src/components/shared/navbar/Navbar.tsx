@@ -15,7 +15,7 @@ import { previewImage } from "@/utils/previewImage";
 const Navbar = () => {
   const user = useAppSelector((state) => state.auth.user);
   const isLoggedIn = Cookies.get("hue-man-expressions-access-token");
-  const {data:userData, isLoading} = useGetProfileQuery(undefined, {skip: !user || !isLoggedIn});
+  const {data:userData} = useGetProfileQuery(undefined, {skip: !user || !isLoggedIn});
 
   return (
     <div className=" bg-primary-white overflow-x-auto  mx-auto">

@@ -10,7 +10,12 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import Link from "next/link";
 
 const bannerImage = [
   "/bannerImage1.png",
@@ -83,19 +88,20 @@ const BannerSection = () => {
               Empowering communication. Celebrating diversity. Changing lives.
             </p>
             <Popover>
-            <PopoverTrigger asChild>
-            <CommonButton>Explore the App</CommonButton>
-            </PopoverTrigger>
-            <PopoverContent className="w-80">
-              <div className="bg-primary-white text-black p-2 mt-2 text-xl rounded-md z-[9999]">
-                <h1>
-                  It will be redirected to the mobile application when the
-                  mobile application is published.
-                </h1>
-              </div>
-            </PopoverContent>
-          </Popover>
-          
+              <PopoverTrigger asChild>
+                <Link href={"/expression-gallery#combo"}>
+                  <CommonButton>Buy Now</CommonButton>
+                </Link>
+              </PopoverTrigger>
+              <PopoverContent className="w-80">
+                <div className="bg-primary-white text-black p-2 mt-2 text-xl rounded-md z-[9999]">
+                  <h1>
+                    It will be redirected to the mobile application when the
+                    mobile application is published.
+                  </h1>
+                </div>
+              </PopoverContent>
+            </Popover>
           </div>
         </div>
 

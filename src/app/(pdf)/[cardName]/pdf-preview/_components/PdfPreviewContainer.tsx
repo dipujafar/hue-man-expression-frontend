@@ -379,7 +379,7 @@ const PdfPreviewContainer = ({ cardName }: { cardName: string }) => {
       <div className="flex-grow">
         <PDFViewer width="100%" height="100%">
           {/* @ts-ignore */}
-          <PdfTemplate data={currentDoc.cardData} />
+          <PdfTemplate data={currentDoc?.cardData} />
         </PDFViewer>
       </div>
     </div>

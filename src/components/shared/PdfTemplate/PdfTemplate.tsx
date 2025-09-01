@@ -9,6 +9,19 @@ import {
   StyleSheet,
 } from "@react-pdf/renderer";
 
+const customStyles = (imageUrl: string) => {
+  switch (imageUrl) {
+    case "/cadult_image1.png":
+      return { height: "82%", width: "78%" };
+    case "/potty_training_image1.png":
+      return { height: "90%", width: "92%" };
+    case "/potty_training_image2.png":
+      return { height: "90%", width: "92%" };
+    default:
+      return { height: "100%", width: "100%" };
+  }
+};
+
 type CardProps = {
   title?: string;
   imageUrl: string;
@@ -33,9 +46,10 @@ const styles = StyleSheet.create({
 });
 
 const Card = ({ title, imageUrl }: CardProps) => (
-  <View style={styles.card}>
-    <Image style={styles.image} src={imageUrl} />
-    {/* <Text style={styles.title}>{title}</Text> */}
+  <View style={styles?.card}>
+    <Image style={customStyles(imageUrl)} src={imageUrl} />
+
+    {/* <Text style={styles.title}>{imageUrl}</Text> */}
   </View>
 );
 

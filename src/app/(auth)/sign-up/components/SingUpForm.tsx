@@ -233,7 +233,7 @@ const SingUpForm = () => {
                 type="submit"
                 className="bg-[#FDFDFD] group overflow-hidden text-black w-full rounded-full hover:text-white mt-3"
               >
-                Send Request
+                Submit
                 {isLoading && <LoadingSpin></LoadingSpin>}
               </Button>
             </div>

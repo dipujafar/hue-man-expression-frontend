@@ -26,10 +26,10 @@ const AllPurchasedCards = () => {
     href: string,
     print: string
   ) => {
-    if (parseInt(print) >= 10) {
-      toast.error("You can not print more than 10 cards. Please renew your plan.");
-      return;
-    }
+    // if (parseInt(print) >= 10) {
+    //   toast.error("You can not print more than 10 cards. Please renew your plan.");
+    //   return;
+    // }
 
     try {
       await updatePrintCount(id).unwrap();
