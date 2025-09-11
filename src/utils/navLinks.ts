@@ -23,4 +23,8 @@ export const navLinks = [
     label: "Social Expressions",
     href: "/contact",
   },
+  {
+    label: "Portia Pro",
+    href: "/portia-pro",
+  },
 ];
