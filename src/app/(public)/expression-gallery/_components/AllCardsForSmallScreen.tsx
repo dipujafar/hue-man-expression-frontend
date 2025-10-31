@@ -29,7 +29,7 @@ const AllCardsForSmallScreen = () => {
                   </CardContent>
                 </Card>
               </PopoverTrigger>
-              <PopoverContent className=" lg:w-full w-[250px] max-w-lg">
+              <PopoverContent className=" lg:w-full  max-w-lg">
                 <div className="space-y-2">
                   <h1 className="xl:text-xl font-medium md:text-center text-[#684B3C]">
                     {data?.hoverTitle}
