@@ -10,6 +10,7 @@ import waterMarkImage5 from "@/assets/terms/waterMarkImage4.png";
 import waterMarkImage6 from "@/assets/terms/waterMarkImage10.png";
 import waterMarkImage7 from "@/assets/terms/waterMarkImage9.png";
 import Image from "next/image";
+import AllCardsForSmallScreen from "./AllCardsForSmallScreen";
 
 const ExpressionGalleryContainer = () => {
   return (
@@ -114,7 +115,12 @@ const ExpressionGalleryContainer = () => {
             <BuyNowSection></BuyNowSection>
           </Container>
           <Container>
-            <AllCards></AllCards>
+            <div className="lg:block hidden">
+              <AllCards />
+            </div>
+            <div className="lg:hidden">
+              <AllCardsForSmallScreen />
+            </div>
           </Container>
           <Container>
             <ImportantInformation></ImportantInformation>
