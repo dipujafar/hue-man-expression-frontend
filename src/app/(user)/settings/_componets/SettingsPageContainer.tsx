@@ -26,7 +26,7 @@ const SettingsPageContainer = () => {
       {/* ================== current plan ============================ */}
       <div className="md:space-y-6 space-y-4 ">
         <h1 className="xl:text-5xl md:text-3xl text-2xl font-merienda font-semibold text-[#FFA21B]">
-          Current Plan
+          Purchased Plan
         </h1>
         <hr className="border-dotted border border-[#837959]" />
         <div>

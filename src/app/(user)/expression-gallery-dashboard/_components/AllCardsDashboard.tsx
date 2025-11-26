@@ -1,17 +1,10 @@
 import PurchaseAACCoreBoard from "@/app/(public)/expression-gallery/_components/PurchaseAACCoreBoard";
-import Container from "@/components/shared/Container";
 import { Card, CardContent } from "@/components/ui/card";
-import CommonButton from "@/components/ui/common-button";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
 import { cardData } from "@/utils";
 import Image from "next/image";
 

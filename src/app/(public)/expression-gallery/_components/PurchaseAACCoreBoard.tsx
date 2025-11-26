@@ -1,4 +1,4 @@
-"use client";
+"use client";;
 import { z } from "zod";
 import {
   Form,
@@ -17,8 +17,8 @@ import { useCreatePaymentMutation } from "@/redux/api/paymentApi";
 import { useAppSelector } from "@/redux/hooks";
 import { useRouter } from "next/navigation";
 import { LoginDialog } from "@/components/shared/LoginDialog";
-import { Error_Modal } from "@/modals/modals";
 import LoadingSpin from "@/components/ui/loading-spin";
+import { ShippingAddressFormDialog } from "@/components/shared/ShippingAddressFormDialog";
 
 const FormSchema = z.object({
   type: z.enum(["single", "bundle"], {
@@ -27,11 +27,10 @@ const FormSchema = z.object({
 });
 
 const PurchaseAACCoreBoard = () => {
-  const [createPayment, { isLoading }] = useCreatePaymentMutation();
+  const [openAddressFormDialog, setOpenAddressFormDialog] = useState(false);
+  const [packageData, setPackageData] = useState({});
   const [openLoginDialog, setOpenLoginDialog] = useState(false);
   const user = useAppSelector((state) => state.auth.user);
-  const router = useRouter();
-
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
   });
@@ -41,20 +40,18 @@ const PurchaseAACCoreBoard = () => {
       setOpenLoginDialog(true);
       return;
     }
+
+
+
     const submitData = {
       package_name: data.type,
       price: data.type === "single" ? 25 : 45,
       web: true,
     };
+    setOpenAddressFormDialog(true);
+    setPackageData(submitData);
 
-    try {
-      const res = await createPayment(submitData).unwrap();
-      if (res?.data?.url) {
-        router.push(res?.data?.url);
-      }
-    } catch (error: any) {
-      Error_Modal({ title: error?.data?.message });
-    }
+  
   }
 
   return (
@@ -94,9 +91,10 @@ const PurchaseAACCoreBoard = () => {
               </FormItem>
             )}
           />
+
           <div className=" flex justify-center">
-            <CommonButton disable={isLoading}>
-              Buy Now {isLoading && <LoadingSpin />}
+            <CommonButton>
+              Buy Now
             </CommonButton>
           </div>
         </form>
@@ -105,6 +103,7 @@ const PurchaseAACCoreBoard = () => {
         open={openLoginDialog}
         setOpen={setOpenLoginDialog}
       ></LoginDialog>
+      <ShippingAddressFormDialog open={openAddressFormDialog} setOpen={setOpenAddressFormDialog} packageData={packageData} />
     </>
   );
 };
