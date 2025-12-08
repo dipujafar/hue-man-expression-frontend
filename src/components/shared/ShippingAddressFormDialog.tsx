@@ -63,7 +63,7 @@ export function ShippingAddressFormDialog({ open, setOpen, packageData }: { open
 
         if(packageData?.type){
             // @ts-ignore
-            formattedData["type"] = packageData?.type
+            formattedData.address["type"] = packageData?.type
         }
 
 
