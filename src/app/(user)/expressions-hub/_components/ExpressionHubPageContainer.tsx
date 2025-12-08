@@ -5,11 +5,25 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { useGetPrintsQuery, useUpdatePrintDataMutation } from "@/redux/api/printApi";
+import { useEffect, useState } from "react";
+
 
 const ExpressionHubPageContainer = () => {
+  const [comboSubscription, setComboSubscription] = useState<boolean>(false);
   const { data: subscriptionData, isLoading: isSubscriptionLoading } =
     useGetMySubscriptionQuery(undefined);
+
+
+    useEffect(() => {
+      subscriptionData?.data?.forEach((plan: any) => {
+        if (plan?.package_name === "combo") {
+          setComboSubscription(true);
+        }
+      });
+    },)
+    console.log(subscriptionData?.data);
+
+
 
   // const { data, isLoading: PrintDataLoading } = useGetPrintsQuery(undefined);
   // const [updatePrintCount, { isLoading: updatePrintCountLoading }] =
@@ -38,10 +52,7 @@ const ExpressionHubPageContainer = () => {
   }
 
   // ------------------ if there is active single or bundle subscription then show this message  ------------------
-  if (
-    subscriptionData?.data?.package_name === "single" ||
-    subscriptionData?.data?.package_name === "bundle"
-  ) {
+  if (subscriptionData?.data?.length > 0 && !comboSubscription) {
     return (
       <div>
         <div className="min-h-[calc(100vh-250px)] flex items-center justify-center flex-col gap-y-1.5">
@@ -63,7 +74,7 @@ const ExpressionHubPageContainer = () => {
 
   // ------------------ if there is active combo subscription then show all purchased cards  ------------------
 
-  if (subscriptionData?.data?.package_name === "combo") {
+  if (comboSubscription) {
     return (
       <div>
         <AllPurchasedCards></AllPurchasedCards>
@@ -72,7 +83,7 @@ const ExpressionHubPageContainer = () => {
   }
 
   //  ------------------ if there is no active subscription then show this message  and  this action button  ------------------
-  if (!subscriptionData?.data?.package_name) {
+  if (subscriptionData?.data?.length == 0) {
     return (
       <div>
         <div className="min-h-[calc(100vh-250px)] flex items-center justify-center flex-col gap-y-1.5">

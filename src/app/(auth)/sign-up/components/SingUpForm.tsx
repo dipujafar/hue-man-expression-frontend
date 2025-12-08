@@ -60,9 +60,11 @@ const SingUpForm = () => {
       toast.error("Passwords don't match with confirm password");
       return;
     }
+
     const formattedData = { ...data, confirmPassword: undefined };
     try {
       const res = await createUser(formattedData).unwrap();
+      console.log("hello");
       if (res.data) {
         toast.success("User Created Successfully");
         router.push(`/verify-otp?email=${data?.email}`);

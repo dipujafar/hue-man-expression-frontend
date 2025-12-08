@@ -21,11 +21,27 @@ const CurrentPlan = () => {
   const { data: subscriptionData, isLoading: isSubscriptionLoading } =
     useGetMySubscriptionQuery(undefined);
 
-  console.log(subscriptionData?.data);
 
   if (isSubscriptionLoading) {
     return <CurrentPlanSkeleton />
   }
+
+  if (!subscriptionData?.data?.length) {
+    return <div className="flex items-center justify-center flex-col gap-y-1.5">
+      <h1 className="md:text-2xl text-lg font-bold text-center">
+        You do not any active subscription
+      </h1>
+      <p className="md:text-lg font-medium">
+        Please purchase a subscription for all card with details.
+      </p>
+      <Link href={`/expression-gallery-dashboard#combo`}>
+        <Button className="bg-gradient-to-br from-[#4C3519] to-[#807557]">
+          Purchase
+        </Button>
+      </Link>
+    </div>
+  }
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {

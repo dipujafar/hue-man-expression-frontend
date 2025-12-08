@@ -1,18 +1,8 @@
-"use client"
-
-import { useState } from "react"
+"use client";
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
-import { Button } from "@/components/ui/button"
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogHeader,
-    DialogTitle,
-    DialogTrigger,
-} from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import CommonButton from "./common-button"
@@ -28,7 +18,7 @@ const formSchema = z.object({
         .string()
         .regex(/^[+]?[(]?[0-9]{1,4}[)]?[-\s.]?[(]?[0-9]{1,4}[)]?[-\s.]?[0-9]{1,9}$/, "Invalid phone number"),
     streetAddress: z.string().min(5, "Street address must be at least 5 characters"),
-    areaDistrict: z.string().min(2, "Area/District/Estate is required"),
+    apartmentOrBuildingNo: z.string().optional(),
     city: z.string().min(2, "City must be at least 2 characters"),
     state: z.string().min(2, "State must be at least 2 characters"),
     postalCode: z.string().optional(),
@@ -46,7 +36,7 @@ export function ShippingAddressFormDialog({ open, setOpen, packageData }: { open
             fullName: "",
             phoneNumber: "",
             streetAddress: "",
-            areaDistrict: "",
+            apartmentOrBuildingNo: "",
             city: "",
             state: "",
             postalCode: "",
@@ -54,7 +44,7 @@ export function ShippingAddressFormDialog({ open, setOpen, packageData }: { open
     })
 
     async function onSubmit(values: FormValues) {
-        console.log("Form submitted:", values, packageData);
+        
 
         const formattedData = {
             package_name: packageData?.package_name,
@@ -63,12 +53,19 @@ export function ShippingAddressFormDialog({ open, setOpen, packageData }: { open
             address: {
                 number: values?.phoneNumber,
                 street_address: values?.streetAddress,
-                area: values?.areaDistrict,
+                area: values?.apartmentOrBuildingNo,
                 city: values?.city,
                 state: values?.state,
-                postal_code: values?.postalCode
+                postal_code: values?.postalCode,
+                apartment: values?.apartmentOrBuildingNo
             }
         }
+
+        if(packageData?.type){
+            // @ts-ignore
+            formattedData["type"] = packageData?.type
+        }
+
 
         try {
             const res = await createPayment(formattedData).unwrap();
@@ -142,12 +139,12 @@ export function ShippingAddressFormDialog({ open, setOpen, packageData }: { open
                         {/* Area / District / Estate */}
                         <FormField
                             control={form.control}
-                            name="areaDistrict"
+                            name="apartmentOrBuildingNo"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>Area / District / Estate</FormLabel>
+                                    <FormLabel>Apartment/Building Number</FormLabel>
                                     <FormControl>
-                                        <Input placeholder="Enter your area/district/estate" className="py-5 bg-gray-100" {...field} />
+                                        <Input placeholder="Enter your Apartment/Building Number" className="py-5 bg-gray-100" {...field} />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
