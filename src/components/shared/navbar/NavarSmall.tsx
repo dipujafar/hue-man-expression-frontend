@@ -7,13 +7,12 @@ import logo from "@/assets/image/logo.png";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-
 import { navLinks } from "@/utils/navLinks";
 import {
   childrenVariants,
   parentVariants,
 } from "@/animation/FramerMotionValiants";
-import { Button } from "@/components/ui/button";
+
 
 const SmallDeviceView = () => {
   const currentPath = usePathname();
