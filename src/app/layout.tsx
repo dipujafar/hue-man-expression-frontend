@@ -14,6 +14,9 @@ import { Toaster } from "sonner";
 import Providers from "@/lib/provider/Providers";
 import NextTopLoader from "nextjs-toploader";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-poppins",
