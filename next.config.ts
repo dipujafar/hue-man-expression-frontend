@@ -4,6 +4,14 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  swcMinify: false,
+  experimental: {
+    workerThreads: false,
+  },
+  webpack: (config) => {
+    config.cache = false;
+    return config;
+  },
   async redirects() {
     return [
       {
