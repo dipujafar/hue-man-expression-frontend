@@ -1,9 +1,11 @@
 "use client";
 import Container from "@/components/shared/Container";
 import { Button } from "@/components/ui/button";
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import lottieAni from "@/assets/lottie-files/error_animation.json";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 const CancelPaymentContainer = () => {
   return (

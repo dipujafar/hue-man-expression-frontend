@@ -12,8 +12,8 @@ import {
   Inter,
 } from "next/font/google";
 import { Toaster } from "sonner";
-import Providers from "@/lib/provider/Providers";
 import NextTopLoader from "nextjs-toploader";
+import ProvidersWrapper from "@/lib/provider/ProvidersWrapper";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -86,10 +86,10 @@ export default function RootLayout({
         //className={`antialiased max-w-[2520px] mx-auto`}
         className={`${poppins.className} ${balooChettan2.variable} ${lora.variable} ${montserrat.variable} ${madimi.variable} ${merienda.variable} ${outfit.variable} ${inter.variable} antialiased max-w-[2520px] mx-auto`}
       >
-        <Providers>
+        <ProvidersWrapper>
           {children}
           <Toaster position='top-center' />
-        </Providers>
+        </ProvidersWrapper>
 
         <NextTopLoader
           color='#000'
