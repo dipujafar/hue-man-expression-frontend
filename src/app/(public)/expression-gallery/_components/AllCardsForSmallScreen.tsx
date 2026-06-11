@@ -109,9 +109,9 @@ const AllCardsForSmallScreen = () => {
         </PopoverContent>
       </Popover>
 
-      <div className="lg:mt-10 mt-5 space-y-5">
+      {/* <div className="lg:mt-10 mt-5 space-y-5">
         <PurchaseAACCoreBoard />
-      </div>
+      </div> */}
     </Container>
   );
 };

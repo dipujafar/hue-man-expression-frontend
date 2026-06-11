@@ -33,9 +33,9 @@ const ImportantInformation = () => {
       </div>
       <div className="lg:space-y-5 space-y-3">
         {information.map((item) => (
-          <div key={item._id} className="flex gap-x-3">
+          <div key={item._id} className="flex md:gap-x-3 gap-x-1.5">
             <p> {item?._id}.</p>
-            <p className="md:text-xl  text-lg ">{item.description}</p>
+            <p className="md:text-xl  ">{item.description}</p>
           </div>
         ))}
       </div>

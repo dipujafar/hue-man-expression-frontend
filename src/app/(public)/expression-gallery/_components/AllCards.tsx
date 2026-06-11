@@ -116,7 +116,7 @@ const AllCards = () => {
       <div className="lg:mt-10 mt-5 space-y-5">
        
 
-        <PurchaseAACCoreBoard />
+        {/* <PurchaseAACCoreBoard /> */}
       </div>
     </Container>
   );

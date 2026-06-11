@@ -11,6 +11,8 @@ import waterMarkImage6 from "@/assets/terms/waterMarkImage10.png";
 import waterMarkImage7 from "@/assets/terms/waterMarkImage9.png";
 import Image from "next/image";
 import AllCardsForSmallScreen from "./AllCardsForSmallScreen";
+import { features, platforms } from "./data";
+import Link from "next/link";
 
 const ExpressionGalleryContainer = () => {
   return (
@@ -79,41 +81,92 @@ const ExpressionGalleryContainer = () => {
 
       {/* Content  */}
       <div className="relative">
-        <div className="lg:space-y-20 space-y-10">
-          <PageTitle title="Representation Reflects the Beauty of Our Reality"></PageTitle>
-          <Container className="lg:space-y-10 space-y-6 font-lucida">
-            <p className="lg:text-3xl text-xl text-center text-[#482F10]">
-              Experience the full power of Hue-man Expressions with
-              our All-Inclusive Deck! This comprehensive package gives you
-              access to all of our culturally inclusive, high-quality visuals.
-              Designed to empower learners and enhance therapy or education
-              sessions, this deck ensures that every professional and family has
-              the tools they need to foster growth, representation, and
-              engagement.
+        <div className="lg:space-y-16 space-y-10 text-center">
+          <div>
+            <PageTitle title="Representation Reflects the Beauty of Our Reality" />
+            <p className=" mt-5 lg:text-3xl text-xl text-center text-[#C37E19] font-medium ">
+              Meeting You Where You Are
             </p>
+          </div>
+          <Container className="lg:space-y-10 space-y-6 font-lucida">
+            <div className="space-y-4 text-start">
+              <p className="lg:text-3xl text-xl text-center text-[#482F10]">
+                Hue-man Expressions is available across multiple platforms to
+                ensure that access to culturally relevant, high-quality
+                materials is never a barrier.
+              </p>
+
+              <p className="lg:text-3xl text-xl text-center text-[#482F10]">
+                Whether you’re a clinician running sessions, a teacher building
+                lesson plans, or a parent supporting your child at home, our
+                resources are designed to fit seamlessly into your daily
+                routine.
+              </p>
+            </div>
             <div>
               <h3 className="lg:text-3xl text-xl text-center text-[#C37E19] font-medium mb-4">
-                Why Choose the All-Inclusive Deck?
+                Why Hue-man Expressions?
               </h3>
-              <ul className="max-w-3xl mx-auto lg:text-3xl text-xl lg:space-y-4 space-y-2 ">
-                <li>
-                  • Culturally Inclusive: Celebrate diversity and ensure
-                  learners see themselves reflected in their materials.
-                </li>
-                <li>
-                  • Engaging & Relatable: Make learning fun and meaningful with
-                  visuals designed to connect.
-                </li>
-                <li>
-                  • Convenient & Complete: Access every card in one easy
-                  package, no need to pick and choose.
-                </li>
-              </ul>
+              <div className="md:mt-10 mt-5 grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
+                {features.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="rounded-lg border border-slate-200 bg-slate-50/30 backdrop-blur p-8 transition-shadow hover:shadow-lg"
+                  >
+                    <div className="text-4xl">{feature.icon}</div>
+                    <h3 className="mt-4 text-xl font-semibold text-slate-900">
+                      {feature.title}
+                    </h3>
+                    <p className="mt-3 text-base leading-relaxed text-slate-600">
+                      {feature.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-balance lg:text-3xl text-xl text-center text-[#C37E19] font-medium">
+                Shop Your Way
+              </h2>
+              <p className="mt-2 text-base leading-relaxed text-slate-600">
+                Access Hue-man Expressions on the platform that works best for
+                you:
+              </p>
+
+              <div className="md:mt-10 mt-5 grid gap-6 sm:grid-cols-1 lg:grid-cols-3">
+                {platforms.map((platform, index) => (
+                  <Link
+                    key={index}
+                    href={platform.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative rounded-lg border border-slate-200 bg-slate-50/30 backdrop-blur p-8 transition-all duration-300 hover:border-[#C37E19]/50 hover:shadow-xl"
+                  >
+                    <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-amber-50 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+                    <div className="relative z-10">
+                      <div className="text-4xl">{platform.icon}</div>
+                      <h3 className="mt-4 text-xl font-semibold text-slate-900">
+                        {platform.name}
+                      </h3>
+                      <p className="mt-2 text-sm text-slate-600">
+                        {platform.description}
+                      </p>
+                      <div className="mt-6 inline-flex items-center gap-2 rounded-md bg-[#C37E19] px-4 py-2 text-sm font-semibold text-white transition-colors group-hover:bg-amber-600">
+                        Visit Store
+                        <span className="transition-transform group-hover:translate-x-1">
+                          →
+                        </span>
+                      </div>
+                    </div>
+                  </Link >
+                ))}
+              </div>
             </div>
           </Container>
-          <Container>
+          {/* <Container>
             <BuyNowSection></BuyNowSection>
-          </Container>
+          </Container> */}
           <Container>
             <div className="lg:block hidden">
               <AllCards />
