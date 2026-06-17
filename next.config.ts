@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
   },
   experimental: {
     workerThreads: false,
+     cpus: 1,
   },
   webpack: (config) => {
     config.cache = false;
