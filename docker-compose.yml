@@ -4,6 +4,6 @@ services:
   admin : 
     image : hue-man-expressions:latest
     container_name: hue-man-expressions-container
-    ports :
+    ports : 
       - '3003:3003'
-    env_file : .env
+    # env_file : .env

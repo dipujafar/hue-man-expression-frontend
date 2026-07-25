@@ -1,3 +1,4 @@
+"use client";
 import HomeContainer from "@/components/modules/home/HomeContainer";
 
 export default function Home() {

@@ -1,3 +1,4 @@
+"use client";
 import TermsPageContainer from "./_container/TermsPageContainer";
 
 const TermsPage = () => {

@@ -1,3 +1,4 @@
+"use client";
 import LoginForm from "./components/LoginForm";
 import waterMarkImage6 from "@/assets/our-purpose/waterMarkImage6.png";
 import Image from "next/image";

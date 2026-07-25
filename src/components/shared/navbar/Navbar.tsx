@@ -1,16 +1,13 @@
-"use client";
+"use client";;
 import Image from "next/image";
 import logo from "@/assets/image/logo.png";
 import Container from "../Container";
 import Link from "next/link";
-import { Button } from "../../ui/button";
 import NavLinks from "./NavLinks";
 import SmallDeviceView from "./NavarSmall";
 import { useAppSelector } from "@/redux/hooks";
 import Cookies from "js-cookie";
-import CustomAvatar from "../CustomAvatar";
 import { useGetProfileQuery } from "@/redux/api/profileApi";
-import { previewImage } from "@/utils/previewImage";
 
 const Navbar = () => {
   const user = useAppSelector((state) => state.auth.user);

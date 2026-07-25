@@ -1,3 +1,4 @@
+"use client";
 import ExpressionGalleryContainer from "./_components/ExpressionGalleryContainer";
 
 const ExpressionGalleryPage = () => {

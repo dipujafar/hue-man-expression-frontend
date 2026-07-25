@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import UserProfileContainer from "./_components/UserProfileContainer";
 

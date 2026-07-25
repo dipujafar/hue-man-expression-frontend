@@ -1,3 +1,4 @@
+"use client";
 import PageTitle from "@/components/shared/PageTitle";
 import React from "react";
 import BannerSection from "./BannerSection";

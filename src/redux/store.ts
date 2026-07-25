@@ -16,17 +16,17 @@ import { baseApi } from "./api/baseApi";
 
 const createNoopStorage = () => {
   return {
-    // @ts-expect-error: Ignoring TypeScript error due to inferred 'any' type for 'values' which is handled in the form submit logic
+    // @ts-ignore: Ignoring TypeScript error due to inferred 'any' type for 'values' which is handled in the form submit logic
     getItem(_key) {
       console.log(_key);
       return Promise.resolve(null);
     },
-    // @ts-expect-error: Ignoring TypeScript error due to inferred 'any' type for 'values' which is handled in the form submit logic
+    // @ts-ignore: Ignoring TypeScript error due to inferred 'any' type for 'values' which is handled in the form submit logic
     setItem(_key, value) {
       console.log(_key);
       return Promise.resolve(value);
     },
-    // @ts-expect-error: Ignoring TypeScript error due to inferred 'any' type for 'values' which is handled in the form submit logic
+    // @ts-ignore: Ignoring TypeScript error due to inferred 'any' type for 'values' which is handled in the form submit logic
     removeItem(_key) {
       console.log(_key);
       return Promise.resolve();

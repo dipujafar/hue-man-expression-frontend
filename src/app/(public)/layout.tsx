@@ -1,3 +1,4 @@
+"use client"
 import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/navbar/Navbar";
 import React, { ReactNode } from "react";

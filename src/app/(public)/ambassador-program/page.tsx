@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import AmbassadorProgramContainer from "./_components/AmbassadorProgramContainer";
 

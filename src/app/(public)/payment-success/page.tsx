@@ -1,3 +1,4 @@
+"use client";
 import SuccessContainer from "./_components/SuccessContainer";
 
 const PaymentSuccessPage = () => {

@@ -1,3 +1,4 @@
+"use client";
 import PageTitle from "@/components/shared/PageTitle";
 import DownloadApp from "@/components/shared/DownloadApp";
 import waterMarkImage1 from "@/assets/terms/waterMarkImage1.png";

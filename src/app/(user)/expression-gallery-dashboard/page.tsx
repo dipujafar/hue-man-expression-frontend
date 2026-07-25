@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import ExpressionGalleryDashboardContainer from './_components/ExpressionGalleryDashboardContainer';
 

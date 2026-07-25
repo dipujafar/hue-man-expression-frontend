@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import SingUpForm from "./components/SingUpForm";
 import waterMarkImage6 from "@/assets/our-purpose/waterMarkImage6.png";

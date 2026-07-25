@@ -1,3 +1,4 @@
+"use client";
 import { ReactNode } from "react";
 import SidebarNavigation from "./_components/Sidebar";
 import SmallDeviceSidebar from "./_components/SmallDeviceSidebar";

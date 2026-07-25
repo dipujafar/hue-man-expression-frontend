@@ -1,3 +1,4 @@
+"use client";
 import ExpressionHubPageContainer from './_components/ExpressionHubPageContainer';
 
 const ExpressionsHubPage = () => {
