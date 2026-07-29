@@ -175,9 +175,9 @@ const ExpressionGalleryContainer = () => {
               <AllCardsForSmallScreen />
             </div>
           </Container>
-          <Container>
+          {/* <Container>
             <ImportantInformation></ImportantInformation>
-          </Container>
+          </Container> */}
         </div>
       </div>
     </div>

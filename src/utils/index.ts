@@ -26,7 +26,7 @@ export const terms = [
     id: 4,
     question: "Subscription Terms",
     answer: [
-      "The Hue-man Expressions app requires a subscription for access: $19.99/month or $149/year",
+      "The Hue-man Expressions app requires a subscription for access: $10/month or $120/year",
       "Subscriptions auto-renew unless canceled 48 hours before the renewal date.",
       "No refunds are available under any circumstances.",
     ],

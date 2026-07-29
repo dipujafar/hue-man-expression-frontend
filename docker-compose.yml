@@ -6,4 +6,4 @@ services:
     container_name: hue-man-expressions-container
     ports : 
       - '3003:3003'
-    # env_file : .env
+    env_file : .env

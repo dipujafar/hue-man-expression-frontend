@@ -36,7 +36,7 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2 text-primary-white">
               <li>
-                <Link href="#">Log-in </Link>
+                {/* <Link href="#">Log-in </Link> */}
               </li>
               <li>
                 <Link href="/contact">Social Expressions</Link>

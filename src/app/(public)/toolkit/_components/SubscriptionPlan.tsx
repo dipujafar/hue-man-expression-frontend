@@ -22,11 +22,11 @@ const SubscriptionPlan = () => {
             className="py-10 px-10 rounded flex-1"
             style={{ background: "rgba(104, 75, 60, 0.05)" }}
           >
-            <h1 className="xl:text-3xl md:text-2xl text-xl text-center font-medium lg:mb-[160px] mb-[120px]">
+            <h1 className="xl:text-2xl md:text-xl text-xl text-center font-medium lg:mb-[160px] mb-[120px]">
               Monthly Plan
             </h1>
             <h3 className="xl:text-5xl md:text-3xl text-2xl text-center font-medium mb-[60px] truncate">
-              $19.99 <span className="text-2xl font-normal">/month</span>
+              $10 <span className="text-2xl font-normal">/month</span>
             </h3>
             <div className="flex justify-center">
               <Popover>
@@ -51,16 +51,16 @@ const SubscriptionPlan = () => {
                 "linear-gradient(330deg, #807557 7.44%, #4C3519 98.31%)",
             }}
           >
-            <div className="lg:mb-[120px] mb-[80px]">
+            <div className="lg:mb-[160px] mb-[120px]">
               <h1 className="xl:text-3xl md:text-2xl text-xl text-center font-medium">
                 Annual Plan
               </h1>
-              <p className="lg:max-w-[250px] text-center">
+              {/* <p className="lg:max-w-[250px] text-center">
                 Save $90 annually compared to the monthly plan
-              </p>
+              </p> */}
             </div>
             <h3 className="xl:text-5xl md:text-3xl text-2xl text-center font-medium mb-[60px] truncate">
-              $149 <span className="text-2xl font-normal">/year</span>
+              $120 <span className="text-2xl font-normal">/year</span>
             </h3>
             <div className="flex justify-center">
               <Popover>

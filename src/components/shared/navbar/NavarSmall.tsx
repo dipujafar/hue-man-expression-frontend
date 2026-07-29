@@ -67,11 +67,11 @@ const SmallDeviceView = () => {
                 </motion.li>
               ))}
 
-              <motion.li
+              {/* <motion.li
                 variants={childrenVariants}
                 className="group relative overflow-hidden"
               >
-                {/* Background Hover Effect */}
+     
                 <span
                   className={cn(
                     "absolute inset-0 bg-black/10 transform scale-x-0 transition-transform duration-700 ease-in-out group-hover:scale-x-100 ",
@@ -80,7 +80,7 @@ const SmallDeviceView = () => {
                   )}
                 ></span>
 
-                {/* Navigation Link */}
+        
                 <Link
                   href={"/login"}
                   className={cn(
@@ -89,7 +89,7 @@ const SmallDeviceView = () => {
                 >
                   Login
                 </Link>
-              </motion.li>
+              </motion.li> */}
             </motion.ul>
           </motion.div>
 
