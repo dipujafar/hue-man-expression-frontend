@@ -113,7 +113,17 @@ const ExpressionGalleryContainer = () => {
                     key={index}
                     className="rounded-lg border border-slate-200 bg-slate-50/30 backdrop-blur p-8 transition-shadow hover:shadow-lg"
                   >
-                    <div className="text-4xl">{feature.icon}</div>
+                    {feature.image && (
+                      <div className="flex justify-center items-center">
+                        <Image
+                          src={feature.image}
+                          alt={feature.title}
+                          width={1200}
+                          height={1200}
+                          className="mb-4 max-h-96 w-fit rounded-lg"
+                        />
+                      </div>
+                    )}
                     <h3 className="mt-4 text-xl font-semibold text-slate-900">
                       {feature.title}
                     </h3>
@@ -145,7 +155,19 @@ const ExpressionGalleryContainer = () => {
                   >
                     <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-amber-50 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
                     <div className="relative z-10">
-                      <div className="text-4xl">{platform.icon}</div>
+                      {/* <div className="text-4xl">{platform.icon}</div> */}
+                      {platform?.image && (
+                        <div className="flex justify-center items-center">
+                          <Image
+                            src={platform.image}
+                            alt={platform.name}
+                            width={120}
+                            height={20}
+                            className="mb-4 h-16 w-fit "
+                          />
+                        </div>
+                      )}
+
                       <h3 className="mt-4 text-xl font-semibold text-slate-900">
                         {platform.name}
                       </h3>
@@ -159,7 +181,7 @@ const ExpressionGalleryContainer = () => {
                         </span>
                       </div>
                     </div>
-                  </Link >
+                  </Link>
                 ))}
               </div>
             </div>
