@@ -120,7 +120,7 @@ const ExpressionGalleryContainer = () => {
                           alt={feature.title}
                           width={1200}
                           height={1200}
-                          className="mb-4 max-h-96 w-fit rounded-lg"
+                          className="mb-4 max-h-80 w-fit rounded-lg"
                         />
                       </div>
                     )}
