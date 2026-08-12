@@ -17,7 +17,7 @@ const ContactInformation = () => {
 
         <div className="flex gap-x-2  items-center  w-full ">
           <Link
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/huemanexpressions?igsh=MXUycWhubDVvajdq&utm_source=qr"
             target="_blank"
             className="border border-black p-1 rounded-full hover:bg-[#c7a290] duration-500"
           >
@@ -28,7 +28,7 @@ const ContactInformation = () => {
             ></Image>
           </Link>
           <Link
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/share/19KcaAhyG4/?mibextid=wwXIfr"
             target="_blank"
             className="border border-black p-1 rounded-full hover:bg-[#c7a290] duration-500"
           >
@@ -39,7 +39,7 @@ const ContactInformation = () => {
             ></Image>
           </Link>
           <Link
-            href="https://www.tiktok.com"
+            href="https://www.tiktok.com/@hueman.expressions?_r=1&_t=ZP-98jFYw2i1lu"
             target="_blank"
             className="border border-black p-1 rounded-full hover:bg-[#c7a290] duration-500"
           >

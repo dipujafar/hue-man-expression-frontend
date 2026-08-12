@@ -53,7 +53,7 @@ const Footer = () => {
             {/* social media links */}
             <div className="flex gap-x-2 items-center xl:justify-start justify-center  w-full mt-2 xl:ml-16">
               <Link
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/huemanexpressions?igsh=MXUycWhubDVvajdq&utm_source=qr"
                 target="_blank"
                 className="border p-1 rounded-full hover:bg-[#f0f0f0] duration-500"
               >
@@ -64,7 +64,7 @@ const Footer = () => {
                 ></Image>
               </Link>
               <Link
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/share/19KcaAhyG4/?mibextid=wwXIfr"
                 target="_blank"
                 className="border p-1 rounded-full hover:bg-[#f0f0f0] duration-500"
               >
@@ -75,7 +75,7 @@ const Footer = () => {
                 ></Image>
               </Link>
               <Link
-                href="https://www.tiktok.com"
+                href="https://www.tiktok.com/@hueman.expressions?_r=1&_t=ZP-98jFYw2i1lu"
                 target="_blank"
                 className="border p-1 rounded-full hover:bg-[#f0f0f0] duration-500"
               >
