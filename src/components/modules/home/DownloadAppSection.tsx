@@ -49,7 +49,7 @@ const DownloadAppSection = () => {
                   </div>
                 </PopoverContent>
               </Popover>
-              <Popover>
+              {/* <Popover>
                 <PopoverTrigger asChild>
                   <Image src={playStoreImage} alt="playStoreImage"></Image>
                 </PopoverTrigger>
@@ -61,7 +61,7 @@ const DownloadAppSection = () => {
                     </h1>
                   </div>
                 </PopoverContent>
-              </Popover>
+              </Popover> */}
             </div>
           </div>
         </div>
